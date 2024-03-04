@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 type PasswordFormProps = {
     onSubmit: (password: string) => void;
@@ -14,18 +15,20 @@ const PasswordForm: React.FC<PasswordFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="App-center">
-      <form onSubmit={handleSubmit}>
-        <input
+    <Form onSubmit={handleSubmit}>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Control
           type="password"
-          placeholder="Enter password"
+          placeholder="// password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
-};
+}
 
 export default PasswordForm;
