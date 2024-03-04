@@ -10,6 +10,7 @@
     "@types/node": "^16.18.86",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "bcryptjs": "^2.4.3",
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -43,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://kershope-burn.github.io"
+  "homepage": "https://kershope-burn.github.io",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6"
+  }
 }
