@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App-center">
       {authenticated ? (
         <div>
           <h1>Welcome to My Portfolio</h1>
