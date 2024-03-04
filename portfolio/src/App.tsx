@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PasswordForm from './PasswordForm';
+import Home from './Home';
 import bcrypt from 'bcryptjs';
 import './App.css';
 
@@ -17,13 +18,13 @@ function App() {
   }
 
   return (
-    <div className="App-center">
+    <div>
       {authenticated ? (
-        <div>
-          <h1>Welcome to My Portfolio</h1>
-        </div>
+        <Home />
       ) : (
-        <PasswordForm onSubmit={handlePasswordSubmit} />
+        <div className="App-center" >
+          <PasswordForm onSubmit={handlePasswordSubmit}/>
+        </div>
       )}
     </div>
   );
