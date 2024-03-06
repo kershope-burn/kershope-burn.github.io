@@ -64,8 +64,8 @@ function Home() {
         </Container>
       </Navbar>
       <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
+        {/* Can I make this scroll in like it's being typed in a text editor? */}
         <p style={{textAlign: "center"}}>
-          {/* Add an Overlay and Badge here for pronunciation of my name */}
           Hello, I'm <Link title="Pronounced &quot;ash&quot;" id="t-1">Æsc</Link>.<br/><br/>
           I'm a software engineer.<br/><br/>
           This is my portfolio site.<br/><br/>
