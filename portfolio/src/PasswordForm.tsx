@@ -20,7 +20,7 @@ const PasswordForm: React.FC<PasswordFormProps> = ({ onSubmit }) => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Control
           type="password"
-          placeholder="// password"
+          placeholder="# password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
