@@ -1,10 +1,11 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Row from 'react-bootstrap/Row';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Developer("Æsc")</Navbar.Brand>
+          <Navbar.Brand href="#home">ᚫ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -48,18 +49,17 @@ function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
-        {/* Can I make this scroll in like it's being typed in a text editor? */}
-        <Card bg='dark' text='light'>
-          <Card.Body>        
-            <p>
-              Hello, I'm <Link title="Pronounced &quot;ash&quot;" id="t-1">Æsc</Link>.<br/><br/>
-              I'm a software engineer.<br/><br/>
-              This is my portfolio site.<br/><br/>
-              Here, you can learn more about me:<br/> the things I can do;<br/>the things I <i>have</i> done;<br/>and the things that are important to me.<br/><br/>
-            </p>
-          </Card.Body>
-        </Card>
+      <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '75vh' }}>
+        <Row>
+          <Col>
+            <p style={{ fontSize: '5rem' }}>Æsc George</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p>Backend software engineer and proponent of responsible technology.</p>
+          </Col>
+        </Row>
       </Container>
     </>
   );
