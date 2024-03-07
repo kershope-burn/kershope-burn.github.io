@@ -7,23 +7,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
-function Name() {
-  const renderTooltip = () => (
-    <Tooltip id="name-guide">
-      Pronounced "ash"
-    </Tooltip>
-  )
-  return(
-    <OverlayTrigger
-      placement="top"
-      delay={{ show: 250, hide: 400 }}
-      overlay={renderTooltip}
-    >
-      <Badge bg="info">Æsc</Badge>
-    </OverlayTrigger>
-  )
-}
-
 function Home() {
   interface LinkProps {
     id: string;
