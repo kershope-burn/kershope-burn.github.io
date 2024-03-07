@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from 'react-bootstrap/Badge';
+import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -50,12 +50,16 @@ function Home() {
       </Navbar>
       <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
         {/* Can I make this scroll in like it's being typed in a text editor? */}
-        <p style={{textAlign: "center"}}>
-          Hello, I'm <Link title="Pronounced &quot;ash&quot;" id="t-1">Æsc</Link>.<br/><br/>
-          I'm a software engineer.<br/><br/>
-          This is my portfolio site.<br/><br/>
-          Here, you can learn more about me:<br/> the things I can do, the things I <i>have</i> done, and the things that are important to me.<br/><br/>
-        </p>
+        <Card bg='dark' text='light'>
+          <Card.Body>        
+            <p>
+              Hello, I'm <Link title="Pronounced &quot;ash&quot;" id="t-1">Æsc</Link>.<br/><br/>
+              I'm a software engineer.<br/><br/>
+              This is my portfolio site.<br/><br/>
+              Here, you can learn more about me:<br/> the things I can do;<br/>the things I <i>have</i> done;<br/>and the things that are important to me.<br/><br/>
+            </p>
+          </Card.Body>
+        </Card>
       </Container>
     </>
   );
