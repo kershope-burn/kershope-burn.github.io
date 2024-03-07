@@ -54,10 +54,12 @@ function Home() {
                 <NavDropdown.Item href="#action/3.3">Internet Performance</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.4">Homes for Ukraine Guide</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.5">Portfolio Site</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.5">
-                  Food Loose
-                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.7">DDWRT and Secure IoT</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.8">GrapheneOS</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.9">Ubuntu on Windows Surface Pro</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.6">Charity Site on WordPress</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.10">Gaming Blog on WordPress</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.11">Social Media Automation</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
