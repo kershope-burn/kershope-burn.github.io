@@ -25,7 +25,7 @@ function Navigation() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#link">CV</Nav.Link>
+              <Nav.Link href="/resume.pdf" target="_blank">Resume</Nav.Link>
               <NavDropdown title="Projects" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Home Assistant</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">PiHole</NavDropdown.Item>

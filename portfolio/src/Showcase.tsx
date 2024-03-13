@@ -35,7 +35,7 @@ function Showcase() {
       <Row>
         <Col><SocialIcon bgColor="black" network="github" url="https://www.github.com/kershope-burn" /></Col>
         <Col><SocialIcon bgColor="black" network="linkedin" url="https://www.linkedin.com/in/%C3%A6sc-g-7049226b/" /></Col>
-        <Col><SocialIcon bgColor="black" network="email" url="mailto:aesc.george@pm.me" /></Col>
+        <Col><SocialIcon bgColor="black" network="email" url="mailto:pf.corporal837@passmail.com" /></Col>
       </Row>
     </Container>
   );
