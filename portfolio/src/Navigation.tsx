@@ -2,6 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link as ReactRouterLink } from 'react-router-dom';
+
+type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
 
 function Navigation() {
   return (
@@ -21,11 +24,12 @@ function Navigation() {
       </Container> */}
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">ᚫ</Navbar.Brand>
+          <Navbar.Brand href="/">ᚫ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/resume.pdf" target="_blank">Resume</Nav.Link>
+              <Nav.Link as={ReactRouterLink as React.ComponentType<LinkProps>} to="/about">About</Nav.Link>
               <NavDropdown title="Projects" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Home Assistant</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">PiHole</NavDropdown.Item>

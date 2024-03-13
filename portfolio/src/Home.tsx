@@ -1,10 +1,8 @@
-import Navigation from './Navigation';
 import Showcase from './Showcase';
 
 function Home() {
   return (
     <>
-      <Navigation />
       <Showcase />
     </>
   );

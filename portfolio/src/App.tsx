@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import About from './About';
+import Navigation from './Navigation';
 import PasswordForm from './PasswordForm';
 import Home from './Home';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import bcrypt from 'bcryptjs';
 
 
@@ -25,7 +28,15 @@ function App() {
   return (
     <>
       {authenticated ? (
-        <Home />
+        <Router>
+          <div>
+            <Navigation />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </Router>
       ) : (
         // This keeps the password form centred on both axes
         <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
