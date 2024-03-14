@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import About from './About';
 import Navigation from './Navigation';
 import PasswordForm from './PasswordForm';
@@ -10,16 +10,23 @@ import Row from 'react-bootstrap/Row';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import bcrypt from 'bcryptjs';
 
-
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [showPasswordMessage, setShowPasswordMessage] = useState(false);
   const hashedPassword = "$2a$10$7DrCjAlzrc6B3DeiqDFx3unvOcHPi34BDnfp1k7frgfZm/FuZifim"
 
+  useEffect(() => {
+    const auth = localStorage.getItem('authenticated');
+    if (auth) {
+      setAuthenticated(true);
+    }
+  }, []);
+
   const handlePasswordSubmit = (password: string) => {
     const isPasswordCorrect = bcrypt.compareSync(password, hashedPassword)
     if (isPasswordCorrect) {
       setAuthenticated(true);
+      localStorage.setItem('authenticated', 'true');
     } else {
       setShowPasswordMessage(true);
     }

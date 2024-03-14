@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,6 +8,8 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
 
 function Navigation() {
+  const authenticated = useState(true);
+
   return (
     <>
       {/* <Container>
