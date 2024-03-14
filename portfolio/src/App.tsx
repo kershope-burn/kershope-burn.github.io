@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import About from './About';
 import Navigation from './Navigation';
 import PasswordForm from './PasswordForm';
