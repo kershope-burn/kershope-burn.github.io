@@ -12,19 +12,6 @@ function Navigation() {
 
   return (
     <>
-      {/* <Container>
-        <Nav variant="underline" defaultActiveKey="/home">
-          <Nav.Item>
-            <Nav.Link href="/home">&#123;Æsc&#125;</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-1">CV</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2">Projects</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Container> */}
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">ᚫ</Navbar.Brand>

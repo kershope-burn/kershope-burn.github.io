@@ -8,18 +8,6 @@ import 'react-social-icons/linkedin';
 import 'react-social-icons/email';
 
 function Showcase() {
-  // interface LinkProps {
-  //   id: string;
-  //   title: string;
-  //   children: React.ReactNode;
-  // }
-
-  // const Link: React.FC<LinkProps> = ({ id, children, title }) => (
-  //   <OverlayTrigger overlay={<Tooltip id={id}>{title}</Tooltip>}>
-  //     <a href="#">{children}</a>
-  //   </OverlayTrigger>
-  // );
-
   return (
     <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '75vh' }}>
       <Row>
