@@ -69,20 +69,31 @@ function Skills() {
   interface BadgeProps {
     content: string;
     category: string;
+    flex?: boolean;
   }
 
-  const SkillBadge: React.FC<BadgeProps> = ({ content, category }) => {
+  const SkillBadge: React.FC<BadgeProps> = ({ content, category, flex = true }) => {
     const categoryToBgColor: { [key: string]: string } = {
       language: 'primary',
       frameworks: 'info',
       devops: 'success',
-      software: 'warning',
+      software: 'dark',
       other: 'secondary',
     };
 
     const categoryLowerCase = category.toLowerCase();
 
-    return <Badge bg={categoryToBgColor[categoryLowerCase]}>{content}</Badge>;
+    if (flex) {
+      return (
+        <Col xs={10} md={9} lg={8} className="mx-auto">
+          <Badge bg={categoryToBgColor[categoryLowerCase]} className="w-100">{content}</Badge>
+        </Col>
+      );
+    } else {
+      return (
+        <Badge bg={categoryToBgColor[categoryLowerCase]}>{content}</Badge>
+      );
+    }
   };
 
   return (
@@ -103,11 +114,11 @@ function Skills() {
                 <Row style={{ padding: '20px' }}>
                   <h5>
                     <Stack direction="horizontal" gap={2}>
-                      <SkillBadge content="Programming languages" category="language" />
-                      <SkillBadge content="Frameworks and libraries" category="frameworks" />
-                      <SkillBadge content="DevOps and Cloud" category="devops" />
-                      <SkillBadge content="Software and operating systems" category="software" />
-                      <SkillBadge content="Other skills" category="other" />
+                      <SkillBadge content="Programming languages" category="language" flex={false} />
+                      <SkillBadge content="Frameworks and libraries" category="frameworks" flex={false} />
+                      <SkillBadge content="DevOps and Cloud" category="devops" flex={false} />
+                      <SkillBadge content="Software and operating systems" category="software" flex={false} />
+                      <SkillBadge content="Other skills" category="other" flex={false} />
                     </Stack>
                   </h5>
                 </Row>
