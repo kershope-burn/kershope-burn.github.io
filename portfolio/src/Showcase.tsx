@@ -21,9 +21,9 @@ function Showcase() {
         </Col>
       </Row>
       <Row>
-        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="github" url="https://www.github.com/kershope-burn" /></Col>
-        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="linkedin" url="https://www.linkedin.com/in/%C3%A6sc-g-7049226b/" /></Col>
-        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="email" url="mailto:pf.corporal837@passmail.com" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="github" url="https://www.github.com/kershope-burn" target="_blank" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="linkedin" url="https://www.linkedin.com/in/%C3%A6sc-g-7049226b/" target="_blank" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="email" url="mailto:pf.corporal837@passmail.com" target="_blank" /></Col>
       </Row>
     </Container>
   );

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,11 +7,9 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
 
 function Navigation() {
-  const authenticated = useState(true);
-
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">ᚫ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
