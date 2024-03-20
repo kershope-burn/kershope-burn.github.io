@@ -12,18 +12,18 @@ function Showcase() {
     <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '75vh' }}>
       <Row>
         <Col>
-          <p className="display-1">Æsc George</p>
+          <p className="display-1" style={{ color: "floralwhite" }}>Æsc George</p>
         </Col>
       </Row>
       <Row style={{ paddingBottom: '50px' }}>
         <Col>
-          <p>Backend software engineer and proponent of responsible technology.</p>
+          <p style={{ color: "floralwhite" }}>Backend software engineer and proponent of responsible technology.</p>
         </Col>
       </Row>
       <Row>
-        <Col><SocialIcon bgColor="black" network="github" url="https://www.github.com/kershope-burn" /></Col>
-        <Col><SocialIcon bgColor="black" network="linkedin" url="https://www.linkedin.com/in/%C3%A6sc-g-7049226b/" /></Col>
-        <Col><SocialIcon bgColor="black" network="email" url="mailto:pf.corporal837@passmail.com" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="github" url="https://www.github.com/kershope-burn" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="linkedin" url="https://www.linkedin.com/in/%C3%A6sc-g-7049226b/" /></Col>
+        <Col><SocialIcon bgColor="floralwhite" fgColor="black" network="email" url="mailto:pf.corporal837@passmail.com" /></Col>
       </Row>
     </Container>
   );
