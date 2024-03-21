@@ -1,11 +1,11 @@
-import { AboutMe } from './AboutMe';
+import { Profile } from './Profile';
 import { Skills } from './Skills';
 
 function About() {
   return (
     <>
       <div style={{ backgroundColor: 'ghostwhite' }}>
-        {AboutMe()}
+        {Profile()}
       </div>
       <div style={{ paddingTop: '50px' }}>
         {Skills()}

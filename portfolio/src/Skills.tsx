@@ -50,6 +50,33 @@ export function Skills() {
     return checkedEngineeringCategories[skill.category];
   });
 
+  const engineeringCategories = [
+    { id: 'toggle-language-check', variant: 'outline-primary', name: 'language', label: 'Programming languages' },
+    { id: 'toggle-framework-check', variant: 'outline-info', name: 'framework', label: 'Frameworks and libraries' },
+    { id: 'toggle-devops-check', variant: 'outline-success', name: 'devops', label: 'DevOps and Cloud' },
+    { id: 'toggle-software-check', variant: 'outline-dark', name: 'software', label: 'Software and operating systems' },
+    { id: 'toggle-other-check', variant: 'outline-secondary', name: 'other', label: 'Other skills' },
+  ];
+
+  const managementCategories = [
+    { id: 'toggle-management-elements-check', variant: 'outline-primary', name: 'management', label: 'Management elements' },
+    { id: 'toggle-compliance-framework-check', variant: 'outline-info', name: 'compliance', label: 'Compliance framework' },
+     { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
+  ];
+
+  const CategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
+    <ToggleButton
+      id={id}
+      type="checkbox"
+      variant={variant}
+      checked={checkedEngineeringCategories[name]}
+      value="1"
+      onChange={() => toggleEngineeringCategory(name)}
+    >
+      {label}
+    </ToggleButton>
+  );
+
   return (
     <Container>
       <Row className="align-items-center">
@@ -71,56 +98,7 @@ export function Skills() {
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      <ToggleButton
-                        id="toggle-language-check"
-                        type="checkbox"
-                        variant="outline-primary"
-                        checked={checkedEngineeringCategories.language}
-                        value="1"
-                        onChange={() => toggleEngineeringCategory('language')}
-                      >
-                        Programming languages
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-framework-check"
-                        type="checkbox"
-                        variant="outline-info"
-                        checked={checkedEngineeringCategories.framework}
-                        value="1"
-                        onChange={() => toggleEngineeringCategory('framework')}
-                      >
-                        Frameworks and libraries
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-devops-check"
-                        type="checkbox"
-                        variant="outline-success"
-                        checked={checkedEngineeringCategories.devops}
-                        value="1"
-                        onChange={() => toggleEngineeringCategory('devops')}
-                      >
-                        DevOps and Cloud
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-software-check"
-                        type="checkbox"
-                        variant="outline-dark"
-                        checked={checkedEngineeringCategories.software}
-                        value="1"
-                        onChange={() => toggleEngineeringCategory('software')}
-                      >
-                        Software and operating systems
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-other-check"
-                        type="checkbox"
-                        variant="outline-secondary"
-                        checked={checkedEngineeringCategories.other}
-                        value="1"
-                        onChange={() => toggleEngineeringCategory('other')}
-                      >
-                        Other skills
-                      </ToggleButton>
+                      {engineeringCategories.map(category => <CategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
                   </Col>
                 </Row>
@@ -135,36 +113,7 @@ export function Skills() {
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      <ToggleButton
-                        id="toggle-management-elements-check"
-                        type="checkbox"
-                        variant="outline-primary"
-                        checked={checkedManagementCategories.management}
-                        value="1"
-                        onChange={() => toggleManagementCategory('management')}
-                      >
-                        Management elements
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-compliance-framework-check"
-                        type="checkbox"
-                        variant="outline-info"
-                        checked={checkedManagementCategories.compliance}
-                        value="1"
-                        onChange={() => toggleManagementCategory('compliance')}
-                      >
-                        Compliance framework
-                      </ToggleButton>
-                      <ToggleButton
-                        id="toggle-software-tools-check"
-                        type="checkbox"
-                        variant="outline-dark"
-                        checked={checkedManagementCategories.software}
-                        value="1"
-                        onChange={() => toggleManagementCategory('software')}
-                      >
-                        Software and tools
-                      </ToggleButton>
+                      {managementCategories.map(category => <CategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
                   </Col>
                 </Row>

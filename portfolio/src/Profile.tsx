@@ -6,7 +6,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Row from 'react-bootstrap/Row';
 import Tooltip from 'react-bootstrap/Tooltip';
 
-export function AboutMe() {
+export function Profile() {
   interface LinkProps {
     id: string;
     title: string;
