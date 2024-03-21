@@ -182,34 +182,27 @@ export function Skills() {
     }
   };
 
-  const [languageChecked, setLanguageChecked] = useState(true);
-  const [frameworkChecked, setFrameworkChecked] = useState(true);
-  const [devopsChecked, setDevopsChecked] = useState(true);
-  const [softwareChecked, setSoftwareChecked] = useState(true);
-  const [otherChecked, setOtherChecked] = useState(true);
+  type CheckedCategoriesType = {
+    [key: string]: boolean;
+  };
+
+  const [checkedCategories, setCheckedCategories] = useState<CheckedCategoriesType>({
+    language: true,
+    framework: true,
+    devops: true,
+    software: true,
+    other: true
+  });
+
+  const toggleCategory = (category: string) => {
+    setCheckedCategories(prevState => ({
+      ...prevState,
+      [category]: !prevState[category]
+    }));
+  };
 
   const filteredEngineeringSkillBadges = engineeringSkillBadges.filter(skill => {
-    if (languageChecked && skill.category === "language") {
-      return true;
-    }
-
-    if (frameworkChecked && skill.category === "framework") {
-      return true;
-    }
-
-    if (devopsChecked && skill.category === "devops") {
-      return true;
-    }
-
-    if (softwareChecked && skill.category === "software") {
-      return true;
-    }
-
-    if (otherChecked && skill.category === "other") {
-      return true;
-    }
-
-    return false;
+    return checkedCategories[skill.category];
   });
 
   return (
@@ -237,9 +230,9 @@ export function Skills() {
                         id="toggle-language-check"
                         type="checkbox"
                         variant="outline-primary"
-                        checked={languageChecked}
+                        checked={checkedCategories.language}
                         value="1"
-                        onChange={(e) => setLanguageChecked(e.currentTarget.checked)}
+                        onChange={() => toggleCategory('language')}
                       >
                         Programming languages
                       </ToggleButton>
@@ -247,9 +240,9 @@ export function Skills() {
                         id="toggle-framework-check"
                         type="checkbox"
                         variant="outline-info"
-                        checked={frameworkChecked}
+                        checked={checkedCategories.framework}
                         value="1"
-                        onChange={(e) => setFrameworkChecked(e.currentTarget.checked)}
+                        onChange={() => toggleCategory('framework')}
                       >
                         Frameworks and libraries
                       </ToggleButton>
@@ -257,9 +250,9 @@ export function Skills() {
                         id="toggle-devops-check"
                         type="checkbox"
                         variant="outline-success"
-                        checked={devopsChecked}
+                        checked={checkedCategories.devops}
                         value="1"
-                        onChange={(e) => setDevopsChecked(e.currentTarget.checked)}
+                        onChange={() => toggleCategory('devops')}
                       >
                         DevOps and Cloud
                       </ToggleButton>
@@ -267,9 +260,9 @@ export function Skills() {
                         id="toggle-software-check"
                         type="checkbox"
                         variant="outline-dark"
-                        checked={softwareChecked}
+                        checked={checkedCategories.software}
                         value="1"
-                        onChange={(e) => setSoftwareChecked(e.currentTarget.checked)}
+                        onChange={() => toggleCategory('software')}
                       >
                         Software and operating systems
                       </ToggleButton>
@@ -277,9 +270,9 @@ export function Skills() {
                         id="toggle-other-check"
                         type="checkbox"
                         variant="outline-secondary"
-                        checked={otherChecked}
+                        checked={checkedCategories.other}
                         value="1"
-                        onChange={(e) => setOtherChecked(e.currentTarget.checked)}
+                        onChange={() => toggleCategory('other')}
                       >
                         Other skills
                       </ToggleButton>
