@@ -186,7 +186,7 @@ export function Skills() {
     [key: string]: boolean;
   };
 
-  const [checkedCategories, setCheckedCategories] = useState<CheckedCategoriesType>({
+  const [checkedEngineeringCategories, setCheckedEngineeringCategories] = useState<CheckedCategoriesType>({
     language: true,
     framework: true,
     devops: true,
@@ -194,15 +194,32 @@ export function Skills() {
     other: true
   });
 
-  const toggleCategory = (category: string) => {
-    setCheckedCategories(prevState => ({
+  const [checkedManagementCategories, setCheckedManagementCategories] = useState<CheckedCategoriesType>({
+    management: true,
+    compliance: true,
+    software: true,
+  });
+
+  const toggleManagementCategory = (category: string) => {
+    setCheckedManagementCategories((prevState) => ({
+      ...prevState,
+      [category]: !prevState[category],
+    }));
+  };
+
+  const filteredManagementSkillBadges = managementSkillBadges.filter(
+    (skill) => checkedManagementCategories[skill.category]
+  );
+
+  const toggleEngineeringCategory = (category: string) => {
+    setCheckedEngineeringCategories(prevState => ({
       ...prevState,
       [category]: !prevState[category]
     }));
   };
 
   const filteredEngineeringSkillBadges = engineeringSkillBadges.filter(skill => {
-    return checkedCategories[skill.category];
+    return checkedEngineeringCategories[skill.category];
   });
 
   return (
@@ -230,9 +247,9 @@ export function Skills() {
                         id="toggle-language-check"
                         type="checkbox"
                         variant="outline-primary"
-                        checked={checkedCategories.language}
+                        checked={checkedEngineeringCategories.language}
                         value="1"
-                        onChange={() => toggleCategory('language')}
+                        onChange={() => toggleEngineeringCategory('language')}
                       >
                         Programming languages
                       </ToggleButton>
@@ -240,9 +257,9 @@ export function Skills() {
                         id="toggle-framework-check"
                         type="checkbox"
                         variant="outline-info"
-                        checked={checkedCategories.framework}
+                        checked={checkedEngineeringCategories.framework}
                         value="1"
-                        onChange={() => toggleCategory('framework')}
+                        onChange={() => toggleEngineeringCategory('framework')}
                       >
                         Frameworks and libraries
                       </ToggleButton>
@@ -250,9 +267,9 @@ export function Skills() {
                         id="toggle-devops-check"
                         type="checkbox"
                         variant="outline-success"
-                        checked={checkedCategories.devops}
+                        checked={checkedEngineeringCategories.devops}
                         value="1"
-                        onChange={() => toggleCategory('devops')}
+                        onChange={() => toggleEngineeringCategory('devops')}
                       >
                         DevOps and Cloud
                       </ToggleButton>
@@ -260,9 +277,9 @@ export function Skills() {
                         id="toggle-software-check"
                         type="checkbox"
                         variant="outline-dark"
-                        checked={checkedCategories.software}
+                        checked={checkedEngineeringCategories.software}
                         value="1"
-                        onChange={() => toggleCategory('software')}
+                        onChange={() => toggleEngineeringCategory('software')}
                       >
                         Software and operating systems
                       </ToggleButton>
@@ -270,9 +287,9 @@ export function Skills() {
                         id="toggle-other-check"
                         type="checkbox"
                         variant="outline-secondary"
-                        checked={checkedCategories.other}
+                        checked={checkedEngineeringCategories.other}
                         value="1"
-                        onChange={() => toggleCategory('other')}
+                        onChange={() => toggleEngineeringCategory('other')}
                       >
                         Other skills
                       </ToggleButton>
@@ -289,17 +306,42 @@ export function Skills() {
                     <h6>Category: </h6>
                   </Col>
                   <Col>
-                    <h5>
-                      <Stack direction="horizontal" gap={2}>
-                        <SkillBadge content="Management elements" category="management" flex={false} />
-                        <SkillBadge content="Compliance framework" category="compliance" flex={false} />
-                        <SkillBadge content="Software and tools" category="software" flex={false} />
-                      </Stack>
-                    </h5>
+                    <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+                      <ToggleButton
+                        id="toggle-management-elements-check"
+                        type="checkbox"
+                        variant="outline-primary"
+                        checked={checkedManagementCategories.management}
+                        value="1"
+                        onChange={() => toggleManagementCategory('management')}
+                      >
+                        Management elements
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-compliance-framework-check"
+                        type="checkbox"
+                        variant="outline-info"
+                        checked={checkedManagementCategories.compliance}
+                        value="1"
+                        onChange={() => toggleManagementCategory('compliance')}
+                      >
+                        Compliance framework
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-software-tools-check"
+                        type="checkbox"
+                        variant="outline-dark"
+                        checked={checkedManagementCategories.software}
+                        value="1"
+                        onChange={() => toggleManagementCategory('software')}
+                      >
+                        Software and tools
+                      </ToggleButton>
+                    </Stack>
                   </Col>
                 </Row>
                 <Row>
-                  <SkillBadges skillBadgesDescriptions={managementSkillBadges} />
+                  <SkillBadges skillBadgesDescriptions={filteredManagementSkillBadges} />
                 </Row>
               </Tab>
               <Tab eventKey="soft-skills" title="Soft">
