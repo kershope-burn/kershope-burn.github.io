@@ -1,8 +1,8 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+import './Navigation.css'
 
 type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
 
@@ -12,16 +12,16 @@ function Navigation() {
   const getTheme = () => {
     const path = location.pathname;
     if (path === "/") {
-      return "dark";
+      return { className: "bg-transparent", "data-bs-theme": "dark" };
     } else {
-      return "light";
+      return { className: "navbar-white", "data-bs-theme": "light" };
     }
   };
 
   return (
     <>
-      <Navbar style={{ paddingLeft: "1rem", paddingRight: "1rem" }} expand="lg" fixed="top" className="bg-transparent" data-bs-theme={getTheme()}>
-        <Navbar.Brand href="/">ᚫ</Navbar.Brand>
+      <Navbar style={{ fontSize: "1.2rem", paddingLeft: "1rem", paddingRight: "1rem" }} expand="lg" fixed="top" {...getTheme()}>
+        <Navbar.Brand href="/">__æsc__()</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

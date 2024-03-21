@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -42,7 +41,7 @@ function AboutMe() {
   );
 
   return (
-    <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '50vh' }}>
+    <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '75vh' }}>
       <Row className="align-items-center" style={{ paddingBottom: '50px' }}>
         <Col xs={6} md={4}>
           <Image src="/persona300.png" roundedCircle />
@@ -52,7 +51,7 @@ function AboutMe() {
             <p className="display-3">About Me</p>
           </Row>
           <Row className="text-center" style={{ paddingBottom: '20px' }}>
-            <p style={{ fontSize: '1.2rem' }}>My name is <Link id="name" title="Pronounced 'ash'" children="Æsc" />. I'm a software engineer and proponent of responsible technology and technology leadership in the spheres of sustainability, information security, data privacy, diversity and inclusion, and AI ethics. This draws me to "tech for good" and companies that practice responsible technology.</p>
+            <p style={{ fontSize: '1.2rem' }}>My name is <Link id="name" title="Pronounced 'ash'" children="Æsc" />. I'm a software engineer and proponent of responsible technology, demonstrating leadership in the spheres of sustainability, information security, data privacy, diversity and inclusion, and AI ethics. This draws me to "tech for good" and companies that practice responsible technology.</p>
             <p style={{ fontSize: '1.2rem' }}>My career of more than a decade has taken me through manufacturing, cyber security, fintech, and other industries. I've developed a strong understanding of Python and its ecosystem, including recently working with AI, but have a broad set of skills to draw from to benefit many types of organisation.</p>
           </Row>
           <Row className="text-center">
