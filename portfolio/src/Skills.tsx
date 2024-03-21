@@ -64,7 +64,7 @@ export function Skills() {
      { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
   ];
 
-  const CategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
+  const EngineeringCategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
     <ToggleButton
       id={id}
       type="checkbox"
@@ -72,6 +72,19 @@ export function Skills() {
       checked={checkedEngineeringCategories[name]}
       value="1"
       onChange={() => toggleEngineeringCategory(name)}
+    >
+      {label}
+    </ToggleButton>
+  );
+
+  const ManagementCategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
+    <ToggleButton
+      id={id}
+      type="checkbox"
+      variant={variant}
+      checked={checkedManagementCategories[name]}
+      value="1"
+      onChange={() => toggleManagementCategory(name)}
     >
       {label}
     </ToggleButton>
@@ -98,7 +111,7 @@ export function Skills() {
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      {engineeringCategories.map(category => <CategoryToggleButton key={category.id} {...category} />)}
+                      {engineeringCategories.map(category => <EngineeringCategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
                   </Col>
                 </Row>
@@ -113,7 +126,7 @@ export function Skills() {
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      {managementCategories.map(category => <CategoryToggleButton key={category.id} {...category} />)}
+                      {managementCategories.map(category => <ManagementCategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
                   </Col>
                 </Row>

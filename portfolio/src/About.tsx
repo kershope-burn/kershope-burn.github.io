@@ -7,7 +7,7 @@ function About() {
       <div style={{ backgroundColor: 'ghostwhite' }}>
         {Profile()}
       </div>
-      <div style={{ paddingTop: '50px' }}>
+      <div style={{ paddingTop: '50px', paddingBottom: '50px' }}>
         {Skills()}
       </div>
     </>
