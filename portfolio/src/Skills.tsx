@@ -9,6 +9,7 @@ import Stack from 'react-bootstrap/Stack';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+import { engineeringSkillBadges, managementSkillBadges, softSkillBadges } from './skillBadges';
 
 export function Skills() {
   interface BadgeProps {
@@ -43,96 +44,6 @@ export function Skills() {
       );
     }
   };
-
-  const engineeringSkillBadges = [
-    { content: "Python", category: "language", cardTitle: "Advanced" },
-    { content: "C#", category: "language", cardTitle: "Advanced" },
-    { content: ".NET", category: "framework", cardTitle: "Advanced" },
-    { content: "Docker", category: "devops", cardTitle: "Advanced" },
-    { content: "AWS", category: "devops", cardTitle: "Advanced" },
-    { content: "GitHub", category: "devops", cardTitle: "Advanced" },
-    { content: "Linux", category: "software", cardTitle: "Advanced" },
-    { content: "Backend development", category: "other", cardTitle: "Advanced" },
-    { content: "Data analysis", category: "other", cardTitle: "Advanced" },
-    { content: "Performance optimisation", category: "other", cardTitle: "Advanced" },
-    { content: "Relational databases", category: "other", cardTitle: "Advanced" },
-    { content: "Responsible AI", category: "other", cardTitle: "Advanced" },
-    { content: "System design", category: "other", cardTitle: "Advanced" },
-    { content: "SDLC", category: "other", cardTitle: "Advanced" },
-    { content: "SaaS development", category: "other", cardTitle: "Advanced" },
-    { content: "RESTful APIs", category: "other", cardTitle: "Advanced" },
-    { content: "SQL", category: "language", cardTitle: "Capable" },
-    { content: "C++", category: "language", cardTitle: "Capable" },
-    { content: "PostgreSQL", category: "framework", cardTitle: "Capable" },
-    { content: "FastAPI", category: "framework", cardTitle: "Capable" },
-    { content: "NumPy", category: "framework", cardTitle: "Capable" },
-    { content: "Kubernetes", category: "devops", cardTitle: "Capable" },
-    { content: "Atlassian", category: "devops", cardTitle: "Capable" },
-    { content: "Windows", category: "software", cardTitle: "Capable" },
-    { content: "MacOS", category: "software", cardTitle: "Capable" },
-    { content: "SSMS", category: "software", cardTitle: "Capable" },
-    { content: "Hardware installation", category: "other", cardTitle: "Capable" },
-    { content: "Desktop app development", category: "other", cardTitle: "Capable" },
-    { content: "TypeScript", category: "language", cardTitle: "Developing" },
-    { content: "React", category: "framework", cardTitle: "Developing" },
-    { content: "Flask", category: "framework", cardTitle: "Developing" },
-    { content: "PyTorch", category: "framework", cardTitle: "Developing" },
-    { content: "Athena", category: "devops", cardTitle: "Developing" },
-    { content: "Temporal", category: "devops", cardTitle: "Developing" },
-    { content: "Frontend development", category: "other", cardTitle: "Developing" },
-    { content: "LLM prompt engineering", category: "other", cardTitle: "Developing" },
-    { content: "Java", category: "language", cardTitle: "Rusty but Revivable" },
-    { content: "VB.NET", category: "language", cardTitle: "Rusty but Revivable" },
-    { content: "PowerShell", category: "language", cardTitle: "Rusty but Revivable" },
-    { content: "Angular", category: "framework", cardTitle: "Rusty but Revivable" },
-    { content: "Azure", category: "devops", cardTitle: "Rusty but Revivable" },
-    { content: "Android OS", category: "software", cardTitle: "Rusty but Revivable" },
-    { content: "Firefox development", category: "software", cardTitle: "Rusty but Revivable" },
-    { content: "Android Studio", category: "software", cardTitle: "Rusty but Revivable" },
-    { content: "QT Creator", category: "software", cardTitle: "Rusty but Revivable" },
-    { content: "SOC development", category: "other", cardTitle: "Rusty but Revivable" },
-    { content: "Enterprise networks", category: "other", cardTitle: "Rusty but Revivable" },
-  ];
-
-  const managementSkillBadges = [
-    { content: "Project management", category: "management", cardTitle: "Advanced" },
-    { content: "Tech leadership", category: "management", cardTitle: "Advanced" },
-    { content: "Risk management", category: "management", cardTitle: "Advanced" },
-    { content: "Time management", category: "management", cardTitle: "Advanced" },
-    { content: "Continuous improvement", category: "management", cardTitle: "Advanced" },
-    { content: "Requirements elicitation", category: "management", cardTitle: "Advanced" },
-    { content: "Mentoring", category: "management", cardTitle: "Advanced" },
-    { content: "Data presentation", category: "management", cardTitle: "Advanced" },
-    { content: "ISO shared clauses", category: "compliance", cardTitle: "Advanced" },
-    { content: "ISO 14001", category: "compliance", cardTitle: "Advanced" },
-    { content: "Greenhouse Gas Protocol", category: "compliance", cardTitle: "Advanced" },
-    { content: "SECR", category: "compliance", cardTitle: "Advanced" },
-    { content: "Microsoft Office", category: "software", cardTitle: "Advanced" },
-    { content: "Policy creation", category: "management", cardTitle: "Capable" },
-    { content: "Agile", category: "management", cardTitle: "Capable" },
-    { content: "Technical writing", category: "management", cardTitle: "Capable" },
-    { content: "ISO 27001", category: "compliance", cardTitle: "Capable" },
-    { content: "Monday.com", category: "software", cardTitle: "Capable" },
-    { content: "Jira", category: "software", cardTitle: "Capable" },
-    { content: "Confluence", category: "software", cardTitle: "Capable" },
-    { content: "Line management", category: "management", cardTitle: "Developing" },
-    { content: "GDPR", category: "compliance", cardTitle: "Developing" },
-    { content: "EU AI Act", category: "compliance", cardTitle: "Developing" },
-    { content: "Account management", category: "management", cardTitle: "Rusty but Revivable" },
-  ];
-
-  const softSkillBadges = [
-    { content: "Communication", category: "soft" },
-    { content: "Problem solving", category: "soft" },
-    { content: "Collaboration", category: "soft" },
-    { content: "Critical thinking", category: "soft" },
-    { content: "Adaptability", category: "soft" },
-    { content: "Creativity", category: "soft" },
-    { content: "Leadership", category: "soft" },
-    { content: "Empathy", category: "soft" },
-    { content: "Decision making", category: "soft" },
-    { content: "Organisation", category: "soft" },
-  ];
 
   const SkillBadges = ({ skillBadgesDescriptions }: { skillBadgesDescriptions: Array<{ content: string; category: string; cardTitle?: string; }>; }) => {
     const cards = [
@@ -190,8 +101,8 @@ export function Skills() {
     language: true,
     framework: true,
     devops: true,
-    software: true,
-    other: true
+    software: false,
+    other: false
   });
 
   const [checkedManagementCategories, setCheckedManagementCategories] = useState<CheckedCategoriesType>({
