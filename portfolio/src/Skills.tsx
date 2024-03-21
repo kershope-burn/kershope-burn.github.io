@@ -91,7 +91,7 @@ export function Skills() {
   );
 
   return (
-    <Container>
+    <Container style={{ minHeight: '75vh' }}>
       <Row className="align-items-center">
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
