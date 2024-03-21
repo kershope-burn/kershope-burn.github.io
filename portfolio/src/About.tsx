@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -10,6 +11,8 @@ import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 function About() {
@@ -77,7 +80,7 @@ function Skills() {
       language: 'primary',
       management: 'primary',
       soft: 'primary',
-      frameworks: 'info',
+      framework: 'info',
       compliance: 'info',
       devops: 'success',
       software: 'dark',
@@ -102,7 +105,7 @@ function Skills() {
   const engineeringSkillBadges = [
     { content: "Python", category: "language", cardTitle: "Advanced" },
     { content: "C#", category: "language", cardTitle: "Advanced" },
-    { content: ".NET", category: "frameworks", cardTitle: "Advanced" },
+    { content: ".NET", category: "framework", cardTitle: "Advanced" },
     { content: "Docker", category: "devops", cardTitle: "Advanced" },
     { content: "AWS", category: "devops", cardTitle: "Advanced" },
     { content: "GitHub", category: "devops", cardTitle: "Advanced" },
@@ -118,9 +121,9 @@ function Skills() {
     { content: "RESTful APIs", category: "other", cardTitle: "Advanced" },
     { content: "SQL", category: "language", cardTitle: "Capable" },
     { content: "C++", category: "language", cardTitle: "Capable" },
-    { content: "PostgreSQL", category: "frameworks", cardTitle: "Capable" },
-    { content: "FastAPI", category: "frameworks", cardTitle: "Capable" },
-    { content: "NumPy", category: "frameworks", cardTitle: "Capable" },
+    { content: "PostgreSQL", category: "framework", cardTitle: "Capable" },
+    { content: "FastAPI", category: "framework", cardTitle: "Capable" },
+    { content: "NumPy", category: "framework", cardTitle: "Capable" },
     { content: "Kubernetes", category: "devops", cardTitle: "Capable" },
     { content: "Atlassian", category: "devops", cardTitle: "Capable" },
     { content: "Windows", category: "software", cardTitle: "Capable" },
@@ -129,16 +132,17 @@ function Skills() {
     { content: "Hardware installation", category: "other", cardTitle: "Capable" },
     { content: "Desktop app development", category: "other", cardTitle: "Capable" },
     { content: "TypeScript", category: "language", cardTitle: "Developing" },
-    { content: "React", category: "frameworks", cardTitle: "Developing" },
-    { content: "Flask", category: "frameworks", cardTitle: "Developing" },
-    { content: "PyTorch", category: "frameworks", cardTitle: "Developing" },
+    { content: "React", category: "framework", cardTitle: "Developing" },
+    { content: "Flask", category: "framework", cardTitle: "Developing" },
+    { content: "PyTorch", category: "framework", cardTitle: "Developing" },
     { content: "Athena", category: "devops", cardTitle: "Developing" },
     { content: "Temporal", category: "devops", cardTitle: "Developing" },
+    { content: "Frontend development", category: "other", cardTitle: "Developing" },
     { content: "LLM prompt engineering", category: "other", cardTitle: "Developing" },
     { content: "Java", category: "language", cardTitle: "Rusty but Revivable" },
     { content: "VB.NET", category: "language", cardTitle: "Rusty but Revivable" },
     { content: "PowerShell", category: "language", cardTitle: "Rusty but Revivable" },
-    { content: "Angular", category: "frameworks", cardTitle: "Rusty but Revivable" },
+    { content: "Angular", category: "framework", cardTitle: "Rusty but Revivable" },
     { content: "Azure", category: "devops", cardTitle: "Rusty but Revivable" },
     { content: "Android OS", category: "software", cardTitle: "Rusty but Revivable" },
     { content: "Firefox development", category: "software", cardTitle: "Rusty but Revivable" },
@@ -209,7 +213,7 @@ function Skills() {
                     {skillBadgesDescriptions
                       .filter((badge) => badge.cardTitle === card.title)
                       .map((badge) => (
-                        <SkillBadge key={badge.content} content={badge.content} category={badge.category} />
+                        <SkillBadge content={badge.content} category={badge.category} />
                       ))}
                   </Stack>
                 </Card.Text>
@@ -223,18 +227,48 @@ function Skills() {
         <>
           <Stack className="justify-content-center" direction="horizontal" gap={2} style={{ padding: '10px', fontSize: "1.3rem" }}>
             {skillBadgesDescriptions.slice(0, Math.ceil(skillBadgesDescriptions.length / 2)).map((badge) => (
-              <SkillBadge key={badge.content} content={badge.content} category={badge.category} flex={false} />
+              <SkillBadge content={badge.content} category={badge.category} flex={false} />
             ))}
           </Stack>
           <Stack className="justify-content-center" direction="horizontal" gap={2} style={{ padding: '10px', fontSize: "1.3rem" }}>
             {skillBadgesDescriptions.slice(Math.ceil(skillBadgesDescriptions.length / 2)).map((badge) => (
-              <SkillBadge key={badge.content} content={badge.content} category={badge.category} flex={false} />
+              <SkillBadge content={badge.content} category={badge.category} flex={false} />
             ))}
           </Stack>
         </>
       );
     }
   };
+
+  const [languageChecked, setLanguageChecked] = useState(true);
+  const [frameworkChecked, setFrameworkChecked] = useState(true);
+  const [devopsChecked, setDevopsChecked] = useState(true);
+  const [softwareChecked, setSoftwareChecked] = useState(true);
+  const [otherChecked, setOtherChecked] = useState(true);
+
+  const filteredEngineeringSkillBadges = engineeringSkillBadges.filter(skill => {
+    if (languageChecked && skill.category === "language") {
+      return true;
+    }
+
+    if (frameworkChecked && skill.category === "framework") {
+      return true;
+    }
+
+    if (devopsChecked && skill.category === "devops") {
+      return true;
+    }
+
+    if (softwareChecked && skill.category === "software") {
+      return true;
+    }
+
+    if (otherChecked && skill.category === "other") {
+      return true;
+    }
+
+    return false;
+  });
 
   return (
     <Container>
@@ -256,19 +290,62 @@ function Skills() {
                     <h6>Category: </h6>
                   </Col>
                   <Col>
-                    <h5>
-                      <Stack direction="horizontal" gap={2}>
-                        <SkillBadge content="Programming languages" category="language" flex={false} />
-                        <SkillBadge content="Frameworks and libraries" category="frameworks" flex={false} />
-                        <SkillBadge content="DevOps and Cloud" category="devops" flex={false} />
-                        <SkillBadge content="Software and operating systems" category="software" flex={false} />
-                        <SkillBadge content="Other skills" category="other" flex={false} />
-                      </Stack>
-                    </h5>
+                    <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
+                      <ToggleButton
+                        id="toggle-language-check"
+                        type="checkbox"
+                        variant="outline-primary"
+                        checked={languageChecked}
+                        value="1"
+                        onChange={(e) => setLanguageChecked(e.currentTarget.checked)}
+                      >
+                        Programming languages
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-framework-check"
+                        type="checkbox"
+                        variant="outline-info"
+                        checked={frameworkChecked}
+                        value="1"
+                        onChange={(e) => setFrameworkChecked(e.currentTarget.checked)}
+                      >
+                        Frameworks and libraries
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-devops-check"
+                        type="checkbox"
+                        variant="outline-success"
+                        checked={devopsChecked}
+                        value="1"
+                        onChange={(e) => setDevopsChecked(e.currentTarget.checked)}
+                      >
+                        DevOps and Cloud
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-software-check"
+                        type="checkbox"
+                        variant="outline-dark"
+                        checked={softwareChecked}
+                        value="1"
+                        onChange={(e) => setSoftwareChecked(e.currentTarget.checked)}
+                      >
+                        Software and operating systems
+                      </ToggleButton>
+                      <ToggleButton
+                        id="toggle-other-check"
+                        type="checkbox"
+                        variant="outline-secondary"
+                        checked={otherChecked}
+                        value="1"
+                        onChange={(e) => setOtherChecked(e.currentTarget.checked)}
+                      >
+                        Other skills
+                      </ToggleButton>
+                    </Stack>
                   </Col>
                 </Row>
                 <Row>
-                  <SkillBadges skillBadgesDescriptions={engineeringSkillBadges} />
+                  <SkillBadges skillBadgesDescriptions={filteredEngineeringSkillBadges} />
                 </Row>
               </Tab>
               <Tab eventKey="management-skills" title="Management">
@@ -280,7 +357,7 @@ function Skills() {
                     <h5>
                       <Stack direction="horizontal" gap={2}>
                         <SkillBadge content="Management elements" category="management" flex={false} />
-                        <SkillBadge content="Compliance frameworks" category="compliance" flex={false} />
+                        <SkillBadge content="Compliance framework" category="compliance" flex={false} />
                         <SkillBadge content="Software and tools" category="software" flex={false} />
                       </Stack>
                     </h5>
