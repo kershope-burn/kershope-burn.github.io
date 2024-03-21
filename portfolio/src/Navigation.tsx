@@ -2,14 +2,25 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 
 type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
 
 function Navigation() {
+  const location = useLocation();
+
+  const getTheme = () => {
+    const path = location.pathname;
+    if (path === "/") {
+      return "dark";
+    } else {
+      return "light";
+    }
+  };
+
   return (
     <>
-      <Navbar expand="lg" sticky="top" className="bg-body-tertiary">
+      <Navbar expand="lg" sticky="top" className="bg-transparent" data-bs-theme={getTheme()}>
         <Container>
           <Navbar.Brand href="/">ᚫ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
