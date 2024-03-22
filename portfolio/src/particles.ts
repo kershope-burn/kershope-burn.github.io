@@ -1,45 +1,56 @@
 import type { ISourceOptions } from '@tsparticles/engine';
 
 const options: ISourceOptions = {
-  key: "fireflies",
-  name: "Fireflies",
+  key: "techglow",
+  name: "Tech Glow",
   particles: {
-      number: {
-          value: 100,
-          density: {
-              enable: true,
-          },
+    number: {
+      value: 100,
+      density: {
+        enable: true,
       },
+    },
+    color: {
+      value: "#e0ffff",
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: {
+        min: 0.1,
+        max: 0.5,
+      },
+      animation: {
+        enable: true,
+        speed: 1,
+        sync: false,
+      },
+    },
+    size: {
+      value: {
+        min: 1,
+        max: 3,
+      },
+    },
+    move: {
+      enable: true,
+      speed: {
+        min: 0.1,
+        max: 1,
+      },
+    },
+    links: {
       color: {
-          value: "#e0ffff",
+        value: "#99ffff",
       },
-      shape: {
-          type: "circle",
-      },
-      opacity: {
-          value: {
-              min: 0.1,
-              max: 0.5,
-          },
-          animation: {
-              enable: true,
-              speed: 1,
-              sync: false,
-          },
-      },
-      size: {
-          value: {
-              min: 1,
-              max: 3,
-          },
-      },
-      move: {
-          enable: true,
-          speed: {
-              min: 0.1,
-              max: 1,
-          },
-      },
+      distance: 80,
+      enable: true,
+      triangles: {
+        enable: true,
+        opacity: 0.1,
+      }
+    }
   },
 };
 export default options;
