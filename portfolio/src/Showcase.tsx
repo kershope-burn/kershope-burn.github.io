@@ -9,6 +9,8 @@ import 'react-social-icons/github';
 import 'react-social-icons/linkedin';
 import 'react-social-icons/email';
 
+import './Home.css';
+
 function Showcase() {
   const [githubHover, setGithubHover] = useState(false);
   const [linkedinHover, setLinkedinHover] = useState(false);
@@ -29,12 +31,12 @@ function Showcase() {
     <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '75vh' }}>
       <Row>
         <Col>
-          <p className="display-1" style={{ color: "floralwhite" }}>Æsc George</p>
+          <p className="display-1 kode-mono-regular" style={{ color: "floralwhite" }}>Æsc George</p>
         </Col>
       </Row>
       <Row style={{ paddingBottom: '50px' }}>
         <Col>
-          <p style={{ color: "floralwhite" }}>Backend software engineer and proponent of responsible technology.</p>
+          <p className="kode-mono-regular" style={{ color: "floralwhite" }}>Backend software engineer and proponent of responsible technology.</p>
         </Col>
       </Row>
       <Row>
