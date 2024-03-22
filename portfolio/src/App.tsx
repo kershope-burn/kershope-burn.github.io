@@ -3,6 +3,7 @@ import About from './About';
 import Navigation from './Navigation';
 import PasswordForm from './PasswordForm';
 import Home from './Home';
+import { InitContext } from './InitContext';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -10,12 +11,7 @@ import Row from 'react-bootstrap/Row';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import bcrypt from 'bcryptjs';
 
-import { useMemo } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container as ParticlesContainer,
-  type ISourceOptions
-} from "@tsparticles/engine";
+import { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -60,113 +56,35 @@ function App() {
     });
   }, []);
 
-  const particlesLoaded = async (container?: ParticlesContainer): Promise<void> => {
-    console.log(container);
-  };
-
-  const options: ISourceOptions = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: "#0d47a1",
-        },
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "out",
-          },
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
-    [],
-  );
-
   return (
     <>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-      {authenticated ? (
-        <Router>
-          <div>
-            <Navigation />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
-          </div>
-        </Router>
-      ) : (
-        // This keeps the password form centred on both axes
-        <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-          <Row>
-            <Col>
-              <div style={{minHeight: '200px'}}> {/* This stops reflow when the Alert appears */}
-                <PasswordForm onSubmit={handlePasswordSubmit} />
-                <Alert variant='warning' show={showPasswordMessage} style={{ marginTop: '20px' }}>
-                  Incorrect password
-                </Alert>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      )}
+      <InitContext.Provider value={{ init }}>
+        {authenticated ? (
+          <Router>
+            <div>
+              <Navigation />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+              </Routes>
+            </div>
+          </Router>
+        ) : (
+          // This keeps the password form centred on both axes
+          <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+            <Row>
+              <Col>
+                <div style={{minHeight: '200px'}}> {/* This stops reflow when the Alert appears */}
+                  <PasswordForm onSubmit={handlePasswordSubmit} />
+                  <Alert variant='warning' show={showPasswordMessage} style={{ marginTop: '20px' }}>
+                    Incorrect password
+                  </Alert>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        )}
+      </InitContext.Provider>
     </>
   );
 }
