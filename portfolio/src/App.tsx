@@ -5,14 +5,17 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import bcrypt from 'bcryptjs';
-import { initParticlesEngine } from "@tsparticles/react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 import { InitContext } from './InitContext';
 import About from './About';
 import Navigation from './Navigation';
+import options from './particles';
 import PasswordForm from './PasswordForm';
 import Home from './Home';
+
+import './Home.css';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -21,8 +24,10 @@ function App() {
 
   useEffect(() => {
     const auth = localStorage.getItem('authenticated');
-    if (auth) {
+    if (auth === "true") {
       setAuthenticated(true);
+    } else {
+      setAuthenticated(false);
     }
   }, []);
 
@@ -50,7 +55,7 @@ function App() {
   return (
     <>
       <InitContext.Provider value={{ init }}>
-        {authenticated ? (
+        {authenticated === true ? (
           <Router>
             <div>
               <Navigation />
@@ -61,19 +66,29 @@ function App() {
             </div>
           </Router>
         ) : (
-          // This keeps the password form centred on both axes
-          <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
-            <Row>
-              <Col>
-                <div style={{minHeight: '200px'}}> {/* This stops reflow when the Alert appears */}
-                  <PasswordForm onSubmit={handlePasswordSubmit} />
-                  <Alert variant='warning' show={showPasswordMessage} style={{ marginTop: '20px' }}>
-                    Incorrect password
-                  </Alert>
-                </div>
-              </Col>
-            </Row>
-          </Container>
+          <>
+            {init && (
+              <Particles
+                id="tsparticles"
+                options={options}
+              />
+            )}
+            <div className="home">
+              {/* This keeps the password form centred on both axes */}
+              <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+                <Row>
+                  <Col>
+                    <div style={{minHeight: '200px'}}> {/* This stops reflow when the Alert appears */}
+                      <PasswordForm onSubmit={handlePasswordSubmit} />
+                      <Alert variant='warning' show={showPasswordMessage} style={{ marginTop: '20px' }}>
+                        Incorrect password
+                      </Alert>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </>
         )}
       </InitContext.Provider>
     </>
