@@ -62,7 +62,7 @@ export function Skills() {
   const managementCategories = [
     { id: 'toggle-management-elements-check', variant: 'outline-primary', name: 'management', label: 'Management elements' },
     { id: 'toggle-compliance-framework-check', variant: 'outline-info', name: 'compliance', label: 'Compliance framework' },
-     { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
+    { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
   ];
 
   const EngineeringCategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
@@ -73,6 +73,7 @@ export function Skills() {
       checked={checkedEngineeringCategories[name]}
       value="1"
       onChange={() => toggleEngineeringCategory(name)}
+      style={{ fontSize: '0.9rem' }}
     >
       {label}
     </ToggleButton>
@@ -86,6 +87,7 @@ export function Skills() {
       checked={checkedManagementCategories[name]}
       value="1"
       onChange={() => toggleManagementCategory(name)}
+      style={{ fontSize: '0.9rem' }}
     >
       {label}
     </ToggleButton>
@@ -96,9 +98,9 @@ export function Skills() {
       <Row className="align-items-center">
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3">Skills</p>
+            <p className="display-3 kode-mono-medium">Skills</p>
           </Row>
-          <Row>
+          <Row className="kode-mono-regular">
             <Tabs
               defaultActiveKey="engineering-skills"
               id="skills"
@@ -106,9 +108,9 @@ export function Skills() {
               justify
             >
               <Tab eventKey="engineering-skills" title="Engineering">
-                <Row className="align-items-center" style={{ padding: '20px' }}>
+                <Row className="align-items-center" style={{ padding: '40px' }}>
                   <Col xs="auto">
-                    <h6>Category: </h6>
+                    Category:
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
@@ -121,9 +123,9 @@ export function Skills() {
                 </Row>
               </Tab>
               <Tab eventKey="management-skills" title="Management">
-                <Row className="align-items-center" style={{ padding: '20px' }}>
+                <Row className="align-items-center" style={{ padding: '40px' }}>
                   <Col xs="auto">
-                    <h6>Category: </h6>
+                    Category:
                   </Col>
                   <Col>
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>

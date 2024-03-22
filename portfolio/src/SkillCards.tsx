@@ -52,7 +52,7 @@ const SkillCards = ({ skillBadgesDescriptions }: { skillBadgesDescriptions: Arra
           <Card key={card.title}>
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">{card.subtitle}</Card.Subtitle>
+              <Card.Subtitle style={{ minHeight: '5vh' }} className="mb-2 text-muted">{card.subtitle}</Card.Subtitle>
               <Card.Text>
                 <Stack direction="vertical" gap={2} style={{ fontSize: "1.2rem" }}>
                   {skillBadgesDescriptions
