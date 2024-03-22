@@ -1,7 +1,9 @@
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+
+import './App.css';
 import './Navigation.css'
 
 type LinkProps = React.ComponentProps<typeof ReactRouterLink>;
@@ -12,9 +14,9 @@ function Navigation() {
   const getTheme = () => {
     const path = location.pathname;
     if (path === "/") {
-      return { className: "bg-transparent", "data-bs-theme": "dark" };
+      return { className: "bg-transparent kode-mono-regular", "data-bs-theme": "dark" };
     } else {
-      return { className: "navbar-white", "data-bs-theme": "light" };
+      return { className: "navbar-white kode-mono-regular", "data-bs-theme": "light" };
     }
   };
 

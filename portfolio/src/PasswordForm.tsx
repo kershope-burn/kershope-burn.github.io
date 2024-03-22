@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import './Home.css';
-
 type PasswordFormProps = {
     onSubmit: (password: string) => void;
 }

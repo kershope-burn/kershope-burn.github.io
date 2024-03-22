@@ -5,7 +5,7 @@ import { InitContext } from './InitContext';
 import options from './particles';
 import Showcase from './Showcase';
 
-import './Home.css';
+import './App.css';
 
 function Home() {
   const context = React.useContext(InitContext);
@@ -24,7 +24,7 @@ function Home() {
           options={options}
         />
       }
-      <div className="home">
+      <div className="forest-background">
         <Showcase />
       </div>
     </>

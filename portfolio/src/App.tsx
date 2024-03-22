@@ -15,8 +15,6 @@ import options from './particles';
 import PasswordForm from './PasswordForm';
 import Home from './Home';
 
-import './Home.css';
-
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [showPasswordMessage, setShowPasswordMessage] = useState(false);
