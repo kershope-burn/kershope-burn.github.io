@@ -28,7 +28,7 @@ const PasswordForm: React.FC<PasswordFormProps> = ({ onSubmit }) => {
           />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Unlock
         </Button>
       </Form>
     </>
