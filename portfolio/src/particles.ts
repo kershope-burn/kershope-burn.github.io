@@ -14,7 +14,7 @@ const options: ISourceOptions = {
       value: "#e0ffff",
     },
     shape: {
-      type: "circle",
+      type: "square",
     },
     opacity: {
       value: {
@@ -53,4 +53,5 @@ const options: ISourceOptions = {
     }
   },
 };
+
 export default options;

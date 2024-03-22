@@ -6,6 +6,7 @@ import Stack from 'react-bootstrap/Stack';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+
 import SkillCards from './SkillCards';
 import { engineeringSkillBadges, managementSkillBadges, softSkillBadges } from './skillBadges';
 

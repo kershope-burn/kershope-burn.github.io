@@ -1,21 +1,18 @@
 import { useEffect, useState } from 'react';
-import About from './About';
-import Navigation from './Navigation';
-import PasswordForm from './PasswordForm';
-import Home from './Home';
-import { InitContext } from './InitContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import bcrypt from 'bcryptjs';
-
 import { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { loadSlim } from "@tsparticles/slim";
+
+import { InitContext } from './InitContext';
+import About from './About';
+import Navigation from './Navigation';
+import PasswordForm from './PasswordForm';
+import Home from './Home';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -44,13 +41,7 @@ function App() {
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });

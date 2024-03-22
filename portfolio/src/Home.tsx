@@ -1,11 +1,11 @@
-import React, { useMemo } from "react";
-import { type Container as ParticlesContainer } from "@tsparticles/engine";
-import { type ISourceOptions } from '@tsparticles/engine'
-import Showcase from './Showcase';
-import './Home.css';
-import { InitContext } from './InitContext';
+import React from "react";
 import Particles from '@tsparticles/react';
+
+import { InitContext } from './InitContext';
 import options from './particles';
+import Showcase from './Showcase';
+
+import './Home.css';
 
 function Home() {
   const context = React.useContext(InitContext);
@@ -16,16 +16,11 @@ function Home() {
 
   const init = context.init;
 
-  const particlesLoaded = async (container?: ParticlesContainer): Promise<void> => {
-    console.log(container);
-  };
-
   return (
     <>
       if {init} {
         <Particles
           id="tsparticles"
-          particlesLoaded={particlesLoaded}
           options={options}
         />
       }
