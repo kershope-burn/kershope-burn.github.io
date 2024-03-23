@@ -29,15 +29,15 @@ export function Profile() {
         </Col>
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3 kode-mono-medium">About Me</p>
+            <p className="display-3 portfolio-section-header">About Me</p>
           </Row>
-          <Row className="text-center kode-mono-regular" style={{ paddingBottom: '20px' }}>
+          <Row className="text-center portfolio-text" style={{ paddingBottom: '20px' }}>
             <p style={{ fontSize: '1.1rem' }}>My name is <Link id="name" title="Pronounced 'ash'" children="Æsc" />. I'm a software engineer and proponent of responsible technology, demonstrating leadership in the spheres of sustainability, information security, data privacy, diversity and inclusion, and AI ethics. This draws me to "tech for good" and companies that practice responsible technology.</p>
             <p style={{ fontSize: '1.1rem' }}>My career of more than a decade has taken me through manufacturing, cyber security, fintech, and other industries. I've developed a strong understanding of Python and its ecosystem, including recently working with AI, but have a broad set of skills to draw from to benefit many types of organisation.</p>
           </Row>
           <Row className="text-center">
             <Col md={{ span: 6, offset: 3 }}>
-              <Button className="kode-mono-regular" variant="outline-primary" href="resume.pdf" target="_blank">Resume</Button>
+              <Button className="portfolio-title" variant="outline-primary" href="resume.pdf" target="_blank">Resume</Button>
             </Col>
           </Row>
         </Col>

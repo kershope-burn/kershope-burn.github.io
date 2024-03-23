@@ -71,7 +71,7 @@ function App() {
                 options={options}
               />
             )}
-            <div className="home">
+            <div className="forest-background">
               {/* This keeps the password form centred on both axes */}
               <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
                 <Row>

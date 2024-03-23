@@ -37,7 +37,7 @@
   }
 }
 
-.vt323-regular {
+/* .vt323-regular {
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
@@ -48,24 +48,24 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
-.kode-mono-regular {
+.portfolio-title {
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
 }
 
-.kode-mono-medium {
+.portfolio-section-header {
   font-family: "Kode Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 500;
 }
 
-.kode-mono-semibold {
-  font-family: "Kode Mono", monospace;
+.portfolio-text {
+  font-family: "Fira Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .forest-background {

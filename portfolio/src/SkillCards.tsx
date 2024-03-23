@@ -13,10 +13,10 @@ interface BadgeProps {
 const SkillBadge: React.FC<BadgeProps> = ({ content, category, flex = true }) => {
   const categoryToBgColor: { [key: string]: string; } = {
     language: 'primary',
-    management: 'primary',
+    management: 'info',
     soft: 'primary',
     framework: 'info',
-    compliance: 'info',
+    compliance: 'primary',
     devops: 'success',
     software: 'dark',
     other: 'secondary',
@@ -51,9 +51,9 @@ const SkillCards = ({ skillBadgesDescriptions }: { skillBadgesDescriptions: Arra
         {cards.map((card) => (
           <Card key={card.title}>
             <Card.Body>
-              <Card.Title>{card.title}</Card.Title>
-              <Card.Subtitle style={{ minHeight: '5vh' }} className="mb-2 text-muted">{card.subtitle}</Card.Subtitle>
-              <Card.Text>
+              <Card.Title className="portfolio-section-header">{card.title}</Card.Title>
+              <Card.Subtitle style={{ minHeight: '5vh' }} className="mb-2 text-muted portfolio-text">{card.subtitle}</Card.Subtitle>
+              <Card.Text className="portfolio-text">
                 <Stack direction="vertical" gap={2} style={{ fontSize: "1.2rem" }}>
                   {skillBadgesDescriptions
                     .filter((badge) => badge.cardTitle === card.title)

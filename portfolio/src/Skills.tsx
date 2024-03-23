@@ -8,7 +8,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
 import SkillCards from './SkillCards';
-import { engineeringSkillBadges, managementSkillBadges, softSkillBadges } from './skillBadges';
+import { engineeringCategories, managementCategories, engineeringSkillBadges, managementSkillBadges, softSkillBadges } from './skillBadges';
 
 export function Skills() {
   type CheckedCategoriesType = {
@@ -51,20 +51,6 @@ export function Skills() {
     return checkedEngineeringCategories[skill.category];
   });
 
-  const engineeringCategories = [
-    { id: 'toggle-language-check', variant: 'outline-primary', name: 'language', label: 'Programming languages' },
-    { id: 'toggle-framework-check', variant: 'outline-info', name: 'framework', label: 'Frameworks and libraries' },
-    { id: 'toggle-devops-check', variant: 'outline-success', name: 'devops', label: 'DevOps and Cloud' },
-    { id: 'toggle-software-check', variant: 'outline-dark', name: 'software', label: 'Software and operating systems' },
-    { id: 'toggle-other-check', variant: 'outline-secondary', name: 'other', label: 'Other skills' },
-  ];
-
-  const managementCategories = [
-    { id: 'toggle-management-elements-check', variant: 'outline-primary', name: 'management', label: 'Management elements' },
-    { id: 'toggle-compliance-framework-check', variant: 'outline-info', name: 'compliance', label: 'Compliance framework' },
-    { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
-  ];
-
   const EngineeringCategoryToggleButton = ({ id, variant, name, label }: { id: string, variant: string, name: string, label: string }) => (
     <ToggleButton
       id={id}
@@ -98,17 +84,17 @@ export function Skills() {
       <Row className="align-items-center">
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3 kode-mono-medium">Skills</p>
+            <p className="display-3 portfolio-section-header">Skills</p>
           </Row>
-          <Row className="kode-mono-regular">
+          <Row>
             <Tabs
               defaultActiveKey="engineering-skills"
               id="skills"
-              className="mb-3"
+              className="mb-3 portfolio-title"
               justify
             >
               <Tab eventKey="engineering-skills" title="Engineering">
-                <Row className="align-items-center" style={{ padding: '40px' }}>
+                <Row className="align-items-center portfolio-title" style={{ padding: '40px' }}>
                   <Col xs="auto">
                     Category:
                   </Col>
@@ -123,7 +109,7 @@ export function Skills() {
                 </Row>
               </Tab>
               <Tab eventKey="management-skills" title="Management">
-                <Row className="align-items-center" style={{ padding: '40px' }}>
+                <Row className="align-items-center portfolio-title" style={{ padding: '40px' }}>
                   <Col xs="auto">
                     Category:
                   </Col>

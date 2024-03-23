@@ -1,3 +1,17 @@
+export const engineeringCategories = [
+  { id: 'toggle-language-check', variant: 'outline-primary', name: 'language', label: 'Programming languages' },
+  { id: 'toggle-framework-check', variant: 'outline-info', name: 'framework', label: 'Frameworks and libraries' },
+  { id: 'toggle-devops-check', variant: 'outline-success', name: 'devops', label: 'DevOps and Cloud' },
+  { id: 'toggle-software-check', variant: 'outline-dark', name: 'software', label: 'Software and operating systems' },
+  { id: 'toggle-other-check', variant: 'outline-secondary', name: 'other', label: 'Other skills' },
+];
+
+export const managementCategories = [
+  { id: 'toggle-compliance-framework-check', variant: 'outline-primary', name: 'compliance', label: 'Compliance framework' },
+  { id: 'toggle-management-elements-check', variant: 'outline-info', name: 'management', label: 'Management elements' },
+  { id: 'toggle-software-tools-check', variant: 'outline-dark', name: 'software', label: 'Software and tools' },
+];
+
 export const engineeringSkillBadges = [
   { content: "Python", category: "language", cardTitle: "Advanced" },
   { content: "C#", category: "language", cardTitle: "Advanced" },
@@ -49,6 +63,7 @@ export const engineeringSkillBadges = [
 ];
 
 export const managementSkillBadges = [
+  { content: "ISO shared clauses", category: "compliance", cardTitle: "Advanced" },
   { content: "Project management", category: "management", cardTitle: "Advanced" },
   { content: "Tech leadership", category: "management", cardTitle: "Advanced" },
   { content: "Risk management", category: "management", cardTitle: "Advanced" },
@@ -57,21 +72,20 @@ export const managementSkillBadges = [
   { content: "Requirements elicitation", category: "management", cardTitle: "Advanced" },
   { content: "Mentoring", category: "management", cardTitle: "Advanced" },
   { content: "Data presentation", category: "management", cardTitle: "Advanced" },
-  { content: "ISO shared clauses", category: "compliance", cardTitle: "Advanced" },
   { content: "Microsoft Office", category: "software", cardTitle: "Advanced" },
-  { content: "Policy creation", category: "management", cardTitle: "Capable" },
-  { content: "Agile", category: "management", cardTitle: "Capable" },
-  { content: "Technical writing", category: "management", cardTitle: "Capable" },
   { content: "ISO 14001", category: "compliance", cardTitle: "Capable" },
   { content: "ISO 27001", category: "compliance", cardTitle: "Capable" },
   { content: "Greenhouse Gas Protocol", category: "compliance", cardTitle: "Capable" },
   { content: "SECR", category: "compliance", cardTitle: "Capable" },
+  { content: "Policy creation", category: "management", cardTitle: "Capable" },
+  { content: "Agile", category: "management", cardTitle: "Capable" },
+  { content: "Technical writing", category: "management", cardTitle: "Capable" },
   { content: "Monday.com", category: "software", cardTitle: "Capable" },
   { content: "Jira", category: "software", cardTitle: "Capable" },
   { content: "Confluence", category: "software", cardTitle: "Capable" },
-  { content: "Line management", category: "management", cardTitle: "Developing" },
   { content: "GDPR", category: "compliance", cardTitle: "Developing" },
   { content: "EU AI Act", category: "compliance", cardTitle: "Developing" },
+  { content: "Line management", category: "management", cardTitle: "Developing" },
   { content: "Account management", category: "management", cardTitle: "Rusty but Revivable" },
 ];
 

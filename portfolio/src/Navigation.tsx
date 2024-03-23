@@ -14,9 +14,9 @@ function Navigation() {
   const getTheme = () => {
     const path = location.pathname;
     if (path === "/") {
-      return { className: "bg-transparent kode-mono-regular", "data-bs-theme": "dark" };
+      return { className: "bg-transparent portfolio-title", "data-bs-theme": "dark" };
     } else {
-      return { className: "navbar-white kode-mono-regular", "data-bs-theme": "light" };
+      return { className: "navbar-white portfolio-title", "data-bs-theme": "light" };
     }
   };
 
