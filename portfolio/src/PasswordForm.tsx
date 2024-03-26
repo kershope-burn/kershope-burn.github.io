@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import './App.css';
+
 type PasswordFormProps = {
     onSubmit: (password: string) => void;
 }
@@ -23,9 +25,10 @@ const PasswordForm: React.FC<PasswordFormProps> = ({ onSubmit }) => {
             placeholder="# password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="portfolio-title"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="portfolio-title">
           Unlock
         </Button>
       </Form>

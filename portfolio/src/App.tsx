@@ -15,6 +15,8 @@ import options from './particles';
 import PasswordForm from './PasswordForm';
 import Home from './Home';
 
+import './App.css';
+
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [showPasswordMessage, setShowPasswordMessage] = useState(false);
@@ -78,7 +80,7 @@ function App() {
                   <Col>
                     <div style={{minHeight: '200px'}}> {/* This stops reflow when the Alert appears */}
                       <PasswordForm onSubmit={handlePasswordSubmit} />
-                      <Alert variant='warning' show={showPasswordMessage} style={{ marginTop: '20px' }}>
+                      <Alert variant="warning" show={showPasswordMessage} style={{ marginTop: '20px' }} className="portfolio-text">
                         Incorrect password
                       </Alert>
                     </div>
