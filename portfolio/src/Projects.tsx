@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+import './App.css';
+
 interface ProjectCardProps {
   title: string;
   text: string;
@@ -17,14 +19,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, text, skills, src }) =
     <Card className="shadow-lg">
       <Card.Img variant="top" src={src} style={{ padding: '10px' }} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
+        <Card.Title className="portfolio-section-header">{title}</Card.Title>
+        <Card.Text className="portfolio-text">{text}</Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
+      <ListGroup className="list-group-flush portfolio-text">
         <ListGroup.Item>Primary skills: {skills.join(', ')}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link className="portfolio-text" href="#">Card Link</Card.Link>
       </Card.Body>
     </Card>
   );
@@ -42,7 +44,7 @@ export function Projects() {
             <ProjectCard title="Home Assistant" text="Open source home automation that puts local control and privacy first." skills={["Linux", "Docker", "Networks", "IoT"]} src="/home-assistant_logo_500.png" />
           </Col>
           <Col>
-            <ProjectCard title="PiHole" text="Network-wide ad blocker that improves network performance and blocks unwanted content." skills={["Linux", "Docker", "Networks"]} src="/pihole_logo_500.png" />
+            <ProjectCard title="Pi-hole" text="Network-wide ad blocker that improves network performance and blocks unwanted content." skills={["Linux", "Docker", "Networks"]} src="/pihole_logo_500.png" />
           </Col>
           <Col>
             <ProjectCard title="Portfolio Site" text="This personal website showcasing my projects and skills!" skills={["React", "TypeScript", "LLM prompt engineering", "GitHub"]} src="/react_logo_500.png" />
