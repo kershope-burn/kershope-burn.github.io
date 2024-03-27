@@ -125,7 +125,7 @@ export function Skills() {
               </Tab>
               <Tab eventKey="soft-skills" title="Soft">
                 <Container style={{ minHeight: '40vh'}} className="portfolio-text">
-                  <Row style={{ height: '10vh' }}></Row>
+                  <Row style={{ height: '50px' }}></Row>
                   <Row>
                     <SkillCards skillBadgesDescriptions={softSkillBadges} />
                   </Row>

@@ -51,7 +51,7 @@ const SkillCards = ({ skillBadgesDescriptions }: { skillBadgesDescriptions: Arra
     return (
       <CardGroup>
         {cards.map((card) => (
-          <Card key={card.title}>
+          <Card key={card.title} className="shadow-sm">
             <Card.Body>
               <Card.Title className="portfolio-section-header">{card.title}</Card.Title>
               <Card.Subtitle style={{ minHeight: '5vh' }} className="mb-2 text-muted portfolio-text">{card.subtitle}</Card.Subtitle>

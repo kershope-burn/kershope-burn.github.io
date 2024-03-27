@@ -22,7 +22,7 @@ export function Profile() {
   );
 
   return (
-    <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '75vh' }}>
+    <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '60vh' }}>
       <Row className="align-items-center">
         <Col xs={6} md={4}>
           <Image src="/persona300.png" roundedCircle />
