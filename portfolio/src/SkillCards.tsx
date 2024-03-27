@@ -4,6 +4,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 
+import './App.css';
+
 interface BadgeProps {
   content: string;
   category: string;
@@ -27,12 +29,12 @@ const SkillBadge: React.FC<BadgeProps> = ({ content, category, flex = true }) =>
   if (flex) {
     return (
       <Col xs={10} md={9} lg={8} className="mx-auto">
-        <Badge bg={categoryToBgColor[categoryLowerCase]} className="w-100">{content}</Badge>
+        <Badge bg={categoryToBgColor[categoryLowerCase]} className="w-100 portfolio-text">{content}</Badge>
       </Col>
     );
   } else {
     return (
-      <Badge bg={categoryToBgColor[categoryLowerCase]}>{content}</Badge>
+      <Badge bg={categoryToBgColor[categoryLowerCase]} className="portfolio-text">{content}</Badge>
     );
   }
 };

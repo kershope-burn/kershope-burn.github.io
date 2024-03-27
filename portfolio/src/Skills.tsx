@@ -80,7 +80,7 @@ export function Skills() {
   );
 
   return (
-    <Container style={{ minHeight: '75vh' }}>
+    <Container style={{ minHeight: '80vh' }}>
       <Row className="align-items-center">
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
@@ -94,11 +94,11 @@ export function Skills() {
               justify
             >
               <Tab eventKey="engineering-skills" title="Engineering">
-                <Row className="align-items-center portfolio-title" style={{ padding: '40px' }}>
-                  <Col xs="auto">
-                    Category:
+                <Row className="align-items-center" style={{ padding: '40px' }}>
+                  <Col xs="auto" className="portfolio-title">
+                    Category filter:
                   </Col>
-                  <Col>
+                  <Col className="portfolio-text">
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
                       {engineeringCategories.map(category => <EngineeringCategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
@@ -109,11 +109,11 @@ export function Skills() {
                 </Row>
               </Tab>
               <Tab eventKey="management-skills" title="Management">
-                <Row className="align-items-center portfolio-title" style={{ padding: '40px' }}>
-                  <Col xs="auto">
-                    Category:
+                <Row className="align-items-center" style={{ padding: '40px' }}>
+                  <Col xs="auto" className="portfolio-title">
+                    Category filter:
                   </Col>
-                  <Col>
+                  <Col className="portfolio-text">
                     <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
                       {managementCategories.map(category => <ManagementCategoryToggleButton key={category.id} {...category} />)}
                     </Stack>
@@ -124,9 +124,12 @@ export function Skills() {
                 </Row>
               </Tab>
               <Tab eventKey="soft-skills" title="Soft">
-                <Row>
-                  <SkillCards skillBadgesDescriptions={softSkillBadges} />
-                </Row>
+                <Container style={{ minHeight: '40vh'}} className="portfolio-text">
+                  <Row style={{ height: '10vh' }}></Row>
+                  <Row>
+                    <SkillCards skillBadgesDescriptions={softSkillBadges} />
+                  </Row>
+                </Container>
               </Tab>
             </Tabs>
           </Row>
