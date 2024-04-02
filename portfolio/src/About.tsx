@@ -12,10 +12,10 @@ function About() {
       <div style={{ backgroundColor: '', paddingTop: '50px', paddingBottom: '50px' }}>
         {Skills()}
       </div>
-      <div style={{ backgroundColor: '', paddingTop: '50px', paddingBottom: '50px' }}>
+      <div style={{ backgroundColor: 'ghostwhite', paddingTop: '50px', paddingBottom: '50px' }}>
         {Projects()}
       </div>
-      <div style={{ backgroundColor: 'ghostwhite', paddingTop: '50px'}}>
+      <div style={{ backgroundColor: '', paddingTop: '50px'}}>
         {Contact()}
       </div>
     </>
