@@ -13,6 +13,7 @@ import About from './About';
 import Navigation from './Navigation';
 import options from './particles';
 import PasswordForm from './PasswordForm';
+import ProjectPage from './ProjectPage';
 import Home from './Home';
 
 import './App.css';
@@ -62,6 +63,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/projects/digital-security-and-privacy" element={<ProjectPage />} />
               </Routes>
             </div>
           </Router>
