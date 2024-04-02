@@ -15,6 +15,9 @@ export function Contact() {
           <Row className="text-center" style={{ paddingBottom: '20px' }}>
             <p className="portfolio-text" style={{ fontSize: '1.1rem' }}>Think I could help you out with something? Just want to ask a question or say hi? Then please <a href="mailto:pf.corporal837@passmail.com">email me!</a></p>
           </Row>
+          <Row className="text-center">
+            <p className="portfolio-text" style={{ fontSize: '0.8rem', fontStyle: 'italic' }}>Project icons created by Freepik from Flaticon.</p>
+          </Row>
         </Col>
       </Row>
     </Container>

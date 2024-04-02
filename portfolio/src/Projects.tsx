@@ -23,10 +23,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, text, skills, src }) =
         <Card.Title className="portfolio-section-header">{title}</Card.Title>
         <Card.Text className="portfolio-text">{text}</Card.Text>
         <Container style={{ paddingTop: "10px", paddingBottom: "40px" }}>
-          {skills.map(skill => <Badge bg="primary" style={{ margin: '2px' }}>{skill}</Badge>)}
+          {skills.map(skill => <Badge bg="primary" style={{ margin: '2px', fontSize: '0.9rem' }} className="portfolio-text">{skill}</Badge>)}
         </Container>
         <Container className="d-flex justify-content-center mt-auto">
-          <Button variant="outline-primary">Read more</Button>
+          <Button variant="outline-primary" className="portfolio-title">Read more</Button>
         </Container>
       </Card.Body>
     </Card>
