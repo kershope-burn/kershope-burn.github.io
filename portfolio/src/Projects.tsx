@@ -13,9 +13,10 @@ interface ProjectCardProps {
   text: string;
   skills: string[];
   src: string;
+  link: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, text, skills, src }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, text, skills, src, link }) => {
   return (
     <Card className="shadow-lg">
       <Card.Img variant="top" src={src} style={{ padding: '75px' }} />
@@ -26,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, text, skills, src }) =
           {skills.map(skill => <Badge bg="primary" style={{ margin: '2px', fontSize: '0.9rem' }} className="portfolio-text">{skill}</Badge>)}
         </Container>
         <Container className="d-flex justify-content-center mt-auto">
-          <Button variant="outline-primary" className="portfolio-title">Read more</Button>
+          <Button variant="outline-primary" className="portfolio-title" href={link}>Read more</Button>
         </Container>
       </Card.Body>
     </Card>
@@ -39,25 +40,29 @@ export function Projects() {
       title: "Digital security and privacy",
       text: "Extensive use of trusted open source software to improve digital security and privacy.",
       skills: ["Linux", "Docker", "Networks", "IoT", "AOSP"],
-      src: "/digital-security-and-privacy.png"
+      src: "/digital-security-and-privacy.png",
+      link: "/projects/digital-security-and-privacy"
     },
     {
       title: "Gaming and social media",
       text: "WordPress blog, social media management, and social media automation.",
       skills: ["WordPress", "Web hosting", "SEO", "Google Analytics", "AWS", "Python"],
-      src: "/gaming-and-social-media.png"
+      src: "/gaming-and-social-media.png",
+      link: "/projects/gaming-and-social-media"
     },
     {
       title: "Charity and community",
       text: "Projects to give back.",
       skills: ["WordPress", "Grav CRM", "Web hosting", "Apache HTTP Server", "Linux"],
-      src: "/charity-and-community.png"
+      src: "/charity-and-community.png",
+      link: "projects/charity-and-community"
     },
     {
       title: "Portfolio Site",
       text: "This personal website showcasing my projects and skills!",
       skills: ["React", "TypeScript", "LLM prompt engineering", "GitHub"],
-      src: "/portfolio-site.png"
+      src: "/portfolio-site.png",
+      link: "/projects/portfolio-site"
     },
   ];
 
@@ -70,7 +75,7 @@ export function Projects() {
         <Row>
           {projects.map((project, index) => (
             <Col key={index} className="d-flex align-items-stretch">
-              <ProjectCard title={project.title} text={project.text} skills={project.skills} src={project.src} />
+              <ProjectCard title={project.title} text={project.text} skills={project.skills} src={project.src} link={project.link}/>
             </Col>
           ))}
         </Row>

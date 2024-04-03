@@ -29,3 +29,44 @@ export const digitalSecurityAndPrivacyData: ProjectData = {
     "Extensive network hardening and use of open source router firmware proved a step too far in introducing significant inconvenience."
   ]
 };
+
+export const gamingAndSocialMediaData: ProjectData = {
+  projectTitle: "projects/gaming-and-social-media",
+  projectDescription: [
+    "Gaming is a life-long hobby of mine, with my preference tending towards strategy and simulation games like the Civilization series and Paradox Interactive titles. I also find a lot of joy in modifying these games with community-created content - commonly called \"modding\". For a few years, I created and ran a strategy and simulation modding and gaming site called Odin Gaming."
+  ],
+  projectGoals: [
+    "Learn the essentials of web hosting, WordPress site management, and website performance optimisation.",
+    "Build an engaged community and deepen relationships with game publishers, players, and modders.",
+    "Create a recognisable brand.",
+    "Create a profitable blog by exploring affiliate marketing and other forms of monetisation."
+  ],
+  projectSkills: [
+    <ListGroup.Item><InlineBadge text="WordPress" /> and <InlineBadge text="web hosting" /> from scratch</ListGroup.Item>,
+    <ListGroup.Item>Site performance optimisation</ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="Python" /> scripting</ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="AWS" /> prototyping</ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="SEO" /></ListGroup.Item>,
+    <ListGroup.Item>Community engagement</ListGroup.Item>,
+    <ListGroup.Item>Social media automation</ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="Google Analytics" /> and web traffic insights</ListGroup.Item>,
+    <ListGroup.Item>Affiliate marketing</ListGroup.Item>,
+    <ListGroup.Item>Building a brand</ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="Technical writing" /></ListGroup.Item>,
+    <ListGroup.Item>Blogging</ListGroup.Item>
+  ],
+  projectOutcome: [
+    "Achieved 30,000 unique visitors per month (~50% organic) with ~5000 followers across various social media services and email subscription lists.",
+    "Grew an Instagram account from scratch to 3000+ followers and 400-500 interactions per post in less than two months with social media automation.",
+    "Broke even on hosting and service costs to maintain the blog through affiliate marketing.",
+    "Site performance optimisation is difficult and correlates with site complexity. I attained <3s load times on the home page but if I were to attempt this again, I would keep it simple, and possibly avoid WordPress. I didn't appreciate how steeply the number of bounces increases with increased loading times."
+  ]
+}
+
+// export const charityAndCommunity: ProjectData = {
+
+// }
+
+// export const portfolioSite: ProjectData = {
+
+// }

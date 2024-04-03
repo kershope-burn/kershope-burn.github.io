@@ -14,7 +14,7 @@ import Navigation from './Navigation';
 import options from './particles';
 import PasswordForm from './PasswordForm';
 import { ProjectPage } from './ProjectPage';
-import { digitalSecurityAndPrivacyData } from './projectPages';
+import { digitalSecurityAndPrivacyData, gamingAndSocialMediaData } from './projectPages';
 import Home from './Home';
 
 import './App.css';
@@ -65,6 +65,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects/digital-security-and-privacy" element={<ProjectPage projectData={digitalSecurityAndPrivacyData} />} />
+                <Route path="/projects/gaming-and-social-media" element={<ProjectPage projectData={gamingAndSocialMediaData} />} />
               </Routes>
             </div>
           </Router>
