@@ -73,7 +73,11 @@ export const charityAndCommunityData: ProjectData = {
 
   ],
   projectSkills: [
-
+    <ListGroup.Item><InlineBadge text="WordPress" /> and <InlineBadge text="web hosting" /></ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="Grav CMS" /></ListGroup.Item>,
+    <ListGroup.Item><InlineBadge text="Apache HTTP Server" /> on <InlineBadge text="Linux" /></ListGroup.Item>,
+    <ListGroup.Item>Site performance optimisation</ListGroup.Item>,
+    <ListGroup.Item>Community engagement</ListGroup.Item>
   ],
   projectOutcome: [
 
@@ -90,9 +94,13 @@ export const portfolioSiteData: ProjectData = {
 
   ],
   projectSkills: [
-
+    <ListGroup.Item><InlineBadge text="React" /> and <InlineBadge text="React Bootstrap" /></ListGroup.Item>,
+    <ListGroup.Item>Ability to quickly learn and build a working knowledge of new tools</ListGroup.Item>,
+    <ListGroup.Item>Ability to spin up a simple, responsive, and attractive website</ListGroup.Item>,
+    <ListGroup.Item>Static website hosting with <InlineBadge text="GitHub Pages" /></ListGroup.Item>,
+    <ListGroup.Item>Comfortable using <InlineBadge text="LLMs" /> (like ChatGPT, GitHub Copilot) to improve performance in delivering concrete results</ListGroup.Item>
   ],
   projectOutcome: [
-    
+
   ]
 }

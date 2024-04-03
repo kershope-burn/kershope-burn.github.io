@@ -53,7 +53,7 @@ export function Projects() {
     {
       title: "Charity and community",
       text: "Projects to give back.",
-      skills: ["WordPress", "Grav CRM", "Web hosting", "Apache HTTP Server", "Linux"],
+      skills: ["WordPress", "Grav CMS", "Web hosting", "Apache HTTP Server", "Linux"],
       src: "/charity-and-community.png",
       link: "projects/charity-and-community"
     },
