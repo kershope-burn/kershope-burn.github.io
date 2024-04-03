@@ -33,7 +33,8 @@ export const digitalSecurityAndPrivacyData: ProjectData = {
 export const gamingAndSocialMediaData: ProjectData = {
   projectTitle: "projects/gaming-and-social-media",
   projectDescription: [
-    "Gaming is a life-long hobby of mine, with my preference tending towards strategy and simulation games like the Civilization series and Paradox Interactive titles. I also find a lot of joy in modifying these games with community-created content - commonly called \"modding\". For a few years, I created and ran a strategy and simulation modding and gaming site called Odin Gaming."
+    "Gaming is a life-long hobby of mine, with my preference tending towards strategy and simulation games like the Civilization series and Paradox Interactive titles. I also find a lot of joy in modifying these games with community-created content - commonly called \"modding\". For a few years, I created and ran a strategy and simulation modding and gaming site called Odin Gaming.",
+    "This site is has since ceased operating but it's still available to view with the Wayback Machine. I wrote long-form technical content to explore these games and popular mods. Game modding is often finicky and trouble-shooting is sometimes required."
   ],
   projectGoals: [
     "Learn the essentials of web hosting, WordPress site management, and website performance optimisation.",
@@ -63,10 +64,35 @@ export const gamingAndSocialMediaData: ProjectData = {
   ]
 }
 
-// export const charityAndCommunity: ProjectData = {
+export const charityAndCommunityData: ProjectData = {
+  projectTitle: "projects/charity-and-community",
+  projectDescription: [
+    "I've occasionally used my engineering skills to help benefit my local community directly. Opportunities to do this aren't always obvious but I am always pleased to be able to build metaphorical bridges!"
+  ],
+  projectGoals: [
 
-// }
+  ],
+  projectSkills: [
 
-// export const portfolioSite: ProjectData = {
+  ],
+  projectOutcome: [
 
-// }
+  ]
+}
+
+export const portfolioSiteData: ProjectData = {
+  projectTitle: "projects/portfolio-site",
+  projectDescription: [
+    "I've dabbled with React and Bootstrap in my work life, but it's never made up a significant portion of my time. I built this portfolio site with React Bootstrap and Create React App to learn React and TypeScript, and build a professional online presence. I host it for free with GitHub Pages.",
+    "I learned how to do most of this from the project sites linked above but also used this opportunity to trial GitHub Copilot and found it to be very useful in finding my feet, asking questions about unfamiliar concepts, and quickly refactoring code as my knowledge grew. I was also able to use Microsoft Copilot Designer to generate some of the images on the website; digital art is not my forte and these tools helped me progress without hindrance."
+  ],
+  projectGoals: [
+
+  ],
+  projectSkills: [
+
+  ],
+  projectOutcome: [
+    
+  ]
+}
