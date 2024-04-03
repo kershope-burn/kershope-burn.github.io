@@ -68,6 +68,12 @@
   font-weight: 300;
 }
 
+.portfolio-text-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
 .forest-background {
   position: absolute;
   top: 0;
