@@ -3,6 +3,7 @@ import { ProjectData, InlineBadge } from './ProjectPage';
 
 export const digitalSecurityAndPrivacyData: ProjectData = {
   projectTitle: "projects/digital-security-and-privacy",
+  projectImageLocation: "/digital-security-and-privacy_64.png",
   projectDescription: [
     "Securing information assets and respecting the privacy of all interested parties are aspects of responsible technology. My understanding of how these concepts encroach on personal digital security and privacy - and why I should care about them - deepened by natural proximity when I worked for a cyber security startup.",
     "This project isn't \"done\" in that it is a lifelong attempt to maintain digital security and privacy as technology, my risk profile, and the law evolves. But this page details some of the bigger steps I've taken to protect my digital life.",
@@ -32,6 +33,7 @@ export const digitalSecurityAndPrivacyData: ProjectData = {
 
 export const gamingAndSocialMediaData: ProjectData = {
   projectTitle: "projects/gaming-and-social-media",
+  projectImageLocation: "/gaming-and-social-media_64.png",
   projectDescription: [
     "Gaming is a life-long hobby of mine, with my preference tending towards strategy and simulation games like the Civilization series and Paradox Interactive titles. I also find a lot of joy in modifying these games with community-created content - commonly called \"modding\". For a few years, I created and ran a strategy and simulation modding and gaming site called Odin Gaming.",
     "This site is has since ceased operating but it's still available to view with the Wayback Machine. I wrote long-form technical content to explore these games and popular mods. Game modding is often finicky and trouble-shooting is sometimes required."
@@ -66,11 +68,13 @@ export const gamingAndSocialMediaData: ProjectData = {
 
 export const charityAndCommunityData: ProjectData = {
   projectTitle: "projects/charity-and-community",
+  projectImageLocation: "/charity-and-community_64.png",
   projectDescription: [
     "I've occasionally used my engineering skills to help benefit my local community directly. Opportunities to do this aren't always obvious but I am always pleased to be able to build metaphorical bridges!"
   ],
   projectGoals: [
-
+    "Perform requirements elicitation to discover needs vs wants of beneficiaries.",
+    "Deliver on needs quickly and at zero initial or ongoing cost."
   ],
   projectSkills: [
     <ListGroup.Item><InlineBadge text="WordPress" /> and <InlineBadge text="web hosting" /></ListGroup.Item>,
@@ -80,18 +84,24 @@ export const charityAndCommunityData: ProjectData = {
     <ListGroup.Item>Community engagement</ListGroup.Item>
   ],
   projectOutcome: [
-
+    "Projects each turned around in less than two days, including requirements elicitation.",
+    "The local community benefited from free services.",
+    "Zero initial or ongoing costs to beneficiaries."
   ]
 }
 
 export const portfolioSiteData: ProjectData = {
   projectTitle: "projects/portfolio-site",
+  projectImageLocation: "/portfolio-site_64.png",
   projectDescription: [
     "I've dabbled with React and Bootstrap in my work life, but it's never made up a significant portion of my time. I built this portfolio site with React Bootstrap and Create React App to learn React and TypeScript, and build a professional online presence. I host it for free with GitHub Pages.",
     "I learned how to do most of this from the project sites linked above but also used this opportunity to trial GitHub Copilot and found it to be very useful in finding my feet, asking questions about unfamiliar concepts, and quickly refactoring code as my knowledge grew. I was also able to use Microsoft Copilot Designer to generate some of the images on the website; digital art is not my forte and these tools helped me progress without hindrance."
   ],
   projectGoals: [
-
+    "Learn to use React to create a static site.",
+    "Learn to use GitHub Copilot to work with a new technology on a greenfield project.",
+    "Effectively communicate skills to prospective employers and clients.",
+    "Provide evidence of skills through projects and past employment."
   ],
   projectSkills: [
     <ListGroup.Item><InlineBadge text="React" /> and <InlineBadge text="React Bootstrap" /></ListGroup.Item>,
@@ -101,6 +111,9 @@ export const portfolioSiteData: ProjectData = {
     <ListGroup.Item>Comfortable using <InlineBadge text="LLMs" /> (like ChatGPT, GitHub Copilot) to improve performance in delivering concrete results</ListGroup.Item>
   ],
   projectOutcome: [
-
+    "React basics learned and implemented.",
+    "GitHub Copilot tested and proven to be useful in this situation.",
+    "Static site has been created with React.",
+    "Like what you see? Help with these outcomes and get in touch!"
   ]
 }

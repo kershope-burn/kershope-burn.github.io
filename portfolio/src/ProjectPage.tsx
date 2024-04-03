@@ -12,6 +12,7 @@ import React from 'react';
 
 export type ProjectData = {
   projectTitle: string;
+  projectImageLocation: string;
   projectDescription: string[];
   projectGoals: string[];
   projectSkills: React.ReactNode[];
@@ -27,14 +28,19 @@ export const InlineBadge: React.FC<InlineBadgeProps> = ({ text }) => (
 );
 
 export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
-  const { projectTitle, projectDescription, projectGoals, projectSkills, projectOutcome } = projectData;
+  const { projectTitle, projectImageLocation, projectDescription, projectGoals, projectSkills, projectOutcome } = projectData;
 
   return (
     <>
       <div style={{ backgroundColor: 'ghostwhite' }}>
         <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '70vh' }}>
           <Row style={{ paddingBottom: '50px' }}>
-            <p className="display-6 portfolio-section-header">{projectTitle}</p>
+            <Col xs={3} md={1}>
+              <Image src={projectImageLocation} rounded ></Image>
+            </Col>
+            <Col>
+              <p className="display-6 portfolio-section-header">{projectTitle}</p>
+            </Col>
           </Row>
           <Row style={{ minHeight: '40vh' }}>
             <Col style={{ paddingRight: '50px' }}>
