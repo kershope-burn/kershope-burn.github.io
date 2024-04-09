@@ -51,7 +51,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://kershope-burn.github.io",
+  "homepage": "https://kershope-burn.github.io/#",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6"
   }

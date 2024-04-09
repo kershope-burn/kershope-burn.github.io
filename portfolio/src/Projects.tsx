@@ -41,28 +41,28 @@ export function Projects() {
       text: "Extensive use of trusted open source software to improve digital security and privacy.",
       skills: ["Linux", "Docker", "Networks", "IoT", "AOSP"],
       src: "/digital-security-and-privacy.png",
-      link: "/projects/digital-security-and-privacy"
+      link: "#/projects/digital-security-and-privacy"
     },
     {
       title: "Gaming and social media",
       text: "WordPress blog, social media management, and social media automation.",
       skills: ["WordPress", "Web hosting", "SEO", "Google Analytics", "AWS", "Python"],
       src: "/gaming-and-social-media.png",
-      link: "/projects/gaming-and-social-media"
+      link: "#/projects/gaming-and-social-media"
     },
     {
       title: "Charity and community",
       text: "Projects to give back.",
       skills: ["WordPress", "Grav CMS", "Web hosting", "Apache HTTP Server", "Linux"],
       src: "/charity-and-community.png",
-      link: "projects/charity-and-community"
+      link: "#/projects/charity-and-community"
     },
     {
       title: "Portfolio Site",
       text: "This personal website showcasing my projects and skills!",
       skills: ["React", "TypeScript", "LLM prompt engineering", "GitHub"],
       src: "/portfolio-site.png",
-      link: "/projects/portfolio-site"
+      link: "#/projects/portfolio-site"
     },
   ];
 

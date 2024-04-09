@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -58,8 +58,7 @@ function App() {
     <>
       <InitContext.Provider value={{ init }}>
         {authenticated === true ? (
-          <Router>
-            <div>
+            <>
               <Navigation />
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -69,8 +68,7 @@ function App() {
                 <Route path="/projects/charity-and-community" element={<ProjectPage projectData={charityAndCommunityData} />} />
                 <Route path="/projects/portfolio-site" element={<ProjectPage projectData={portfolioSiteData} />} />
               </Routes>
-            </div>
-          </Router>
+            </>
         ) : (
           <>
             {init && (

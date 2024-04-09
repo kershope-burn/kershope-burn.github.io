@@ -30,10 +30,10 @@ function Navigation() {
             <Nav.Link href="/resume.pdf" target="_blank">Resume</Nav.Link>
             <Nav.Link as={ReactRouterLink as React.ComponentType<LinkProps>} to="/about">About</Nav.Link>
             <NavDropdown title="Projects" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/projects/digital-security-and-privacy">Digital security and privacy</NavDropdown.Item>
-              <NavDropdown.Item href="/projects/gaming-and-social-media">Gaming and social media</NavDropdown.Item>
-              <NavDropdown.Item href="/projects/charity-and-community">Charity and community</NavDropdown.Item>
-              <NavDropdown.Item href="/projects/portfolio-site">Portfolio Site</NavDropdown.Item>
+              <NavDropdown.Item href="#/projects/digital-security-and-privacy">Digital security and privacy</NavDropdown.Item>
+              <NavDropdown.Item href="#/projects/gaming-and-social-media">Gaming and social media</NavDropdown.Item>
+              <NavDropdown.Item href="#/projects/charity-and-community">Charity and community</NavDropdown.Item>
+              <NavDropdown.Item href="#/projects/portfolio-site">Portfolio Site</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

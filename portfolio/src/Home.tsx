@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <>
-      if {init} {
+      {init} {
         <Particles
           id="tsparticles"
           options={options}
