@@ -29,7 +29,7 @@ export function Profile() {
         </Col>
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3 portfolio-section-header">About Me</p>
+            <p className="display-3 portfolio-section-header">about_me()</p>
           </Row>
           <Row className="text-center portfolio-text" style={{ paddingBottom: '20px' }}>
             <p style={{ fontSize: '1.1rem' }}>My name is <Link id="name" title="Pronounced 'ash'" children="Æsc" />. I'm a software engineer and proponent of responsible technology, demonstrating leadership in the spheres of sustainability, information security, data privacy, diversity and inclusion, and AI ethics. This draws me to "tech for good" and companies that practice responsible technology.</p>

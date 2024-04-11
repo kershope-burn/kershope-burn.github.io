@@ -10,7 +10,7 @@ export function Contact() {
       <Row className="align-items-center" style={{ paddingBottom: '50px' }}>
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3 portfolio-section-header">Contact Me</p>
+            <p className="display-3 portfolio-section-header">contact_me()</p>
           </Row>
           <Row className="text-center" style={{ paddingBottom: '20px' }}>
             <p className="portfolio-text" style={{ fontSize: '1.1rem' }}>Think I could help you out with something? Just want to ask a question or say hi? Then please <a href="mailto:pf.corporal837@passmail.com">email me!</a></p>

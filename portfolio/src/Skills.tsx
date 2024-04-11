@@ -84,7 +84,7 @@ export function Skills() {
       <Row className="align-items-center">
         <Col>
           <Row className="text-center" style={{ paddingBottom: '50px' }}>
-            <p className="display-3 portfolio-section-header">Skills</p>
+            <p className="display-3 portfolio-section-header">skills()</p>
           </Row>
           <Row>
             <Tabs

@@ -70,7 +70,7 @@ export function Projects() {
     <>
       <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '60vh' }}>
         <Row className="text-center" style={{ paddingBottom: '50px' }}>
-          <p className="display-3 portfolio-section-header">Projects</p>
+          <p className="display-3 portfolio-section-header">projects()</p>
         </Row>
         <Row>
           {projects.map((project, index) => (
