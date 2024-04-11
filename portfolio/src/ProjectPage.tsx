@@ -17,6 +17,11 @@ export type ProjectData = {
   projectGoals: string[];
   projectSkills: React.ReactNode[];
   projectOutcome: string[];
+  projectAdditionalDetails: {
+    title: string;
+    imageLocation: string;
+    content: React.ReactNode;
+  }[];
 };
 
 interface InlineBadgeProps {
@@ -28,7 +33,15 @@ export const InlineBadge: React.FC<InlineBadgeProps> = ({ text }) => (
 );
 
 export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
-  const { projectTitle, projectImageLocation, projectDescription, projectGoals, projectSkills, projectOutcome } = projectData;
+  const { 
+    projectTitle,
+    projectImageLocation,
+    projectDescription,
+    projectGoals,
+    projectSkills,
+    projectOutcome,
+    projectAdditionalDetails
+  } = projectData;
 
   return (
     <>
@@ -36,7 +49,7 @@ export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
         <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '70vh' }}>
           <Row style={{ paddingBottom: '50px' }}>
             <Col xs={3} md={1}>
-              <Image src={projectImageLocation} rounded ></Image>
+              <Image src={projectImageLocation} rounded />
             </Col>
             <Col>
               <p className="display-6 portfolio-section-header">{projectTitle}</p>
@@ -80,15 +93,35 @@ export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
           </Row>
         </Container>
       </div>
-      {/* <div style={{ backgroundColor: '', paddingTop: '50px', paddingBottom: '50px' }}>
-        <Container className="d-flex flex-column justify-content-center">
-          <Row className="align-items-center"></Row>
-            <Col>
-              
-            </Col>
-          </Row>
-        </Container>
-      </div> */}
+      {projectAdditionalDetails.map((detail, index) => (
+        <div style={{ backgroundColor: index % 2 === 0 ? '' : 'ghostwhite', paddingTop: '50px', paddingBottom: '50px' }}>
+          <Container className="d-flex flex-column justify-content-center">
+            <Row className="align-items-center">
+              { index % 2 === 0 ? (
+                <>
+                  <Col md={3}>
+                    <Image src={detail.imageLocation} roundedCircle />
+                  </Col>
+                  <Col>
+                    <p className="display-6 portfolio-section-header">{detail.title}</p>
+                    {detail.content}
+                  </Col>
+                </>
+              ) : ( 
+                <>
+                  <Col>
+                    <p className="display-6 portfolio-section-header">{detail.title}</p>
+                    {detail.content}
+                  </Col>
+                  <Col md={3}>
+                    <Image src={detail.imageLocation} roundedCircle />
+                  </Col>
+                </>
+              )}
+            </Row>
+          </Container>
+        </div>
+      ))}
     </>
   );
 };

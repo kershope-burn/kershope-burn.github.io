@@ -6,6 +6,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// HashRouter must be used for single-page apps on GitHub Pages
 const router = createHashRouter([
   {
     path: "/*",
