@@ -98,11 +98,11 @@ export function Skills() {
                   <Col xs="auto" className="portfolio-title">
                     Category filter:
                   </Col>
-                  <Col className="portfolio-text">
-                    <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      {engineeringCategories.map(category => <EngineeringCategoryToggleButton key={category.id} {...category} />)}
-                    </Stack>
-                  </Col>
+                  {engineeringCategories.map(category => 
+                    <Col className="portfolio-text text-center" xs="auto" style={{ margin: '2px' }}>
+                      <EngineeringCategoryToggleButton key={category.id} {...category} />
+                    </Col>
+                  )}
                 </Row>
                 <Row>
                   <SkillCards skillBadgesDescriptions={filteredEngineeringSkillBadges} />
@@ -113,11 +113,11 @@ export function Skills() {
                   <Col xs="auto" className="portfolio-title">
                     Category filter:
                   </Col>
-                  <Col className="portfolio-text">
-                    <Stack direction="horizontal" gap={2} style={{ paddingLeft: '10px', paddingRight: '10px' }}>
-                      {managementCategories.map(category => <ManagementCategoryToggleButton key={category.id} {...category} />)}
-                    </Stack>
-                  </Col>
+                  {managementCategories.map(category => 
+                    <Col className="portfolio-text text-center" xs="auto" style={{ margin: '2px' }}>
+                      <ManagementCategoryToggleButton key={category.id} {...category} />
+                    </Col>
+                  )}
                 </Row>
                 <Row>
                   <SkillCards skillBadgesDescriptions={filteredManagementSkillBadges} />

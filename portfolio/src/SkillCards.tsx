@@ -72,16 +72,11 @@ const SkillCards = ({ skillBadgesDescriptions }: { skillBadgesDescriptions: Arra
   } else {
     return (
       <>
-        <Stack className="justify-content-center" direction="horizontal" gap={2} style={{ padding: '10px', fontSize: "1.3rem" }}>
-          {skillBadgesDescriptions.slice(0, Math.ceil(skillBadgesDescriptions.length / 2)).map((badge) => (
-            <SkillBadge content={badge.content} category={badge.category} flex={false} />
-          ))}
-        </Stack>
-        <Stack className="justify-content-center" direction="horizontal" gap={2} style={{ padding: '10px', fontSize: "1.3rem" }}>
-          {skillBadgesDescriptions.slice(Math.ceil(skillBadgesDescriptions.length / 2)).map((badge) => (
-            <SkillBadge content={badge.content} category={badge.category} flex={false} />
-          ))}
-        </Stack>
+        {skillBadgesDescriptions.map((badge) => (
+          <Col className="portfolio-text text-center" xs={6} md={4} style={{ padding: '10px', fontSize: "1.3rem" }}>
+            <SkillBadge content={badge.content} category={badge.category} />
+          </Col>
+        ))}
       </>
     );
   }
