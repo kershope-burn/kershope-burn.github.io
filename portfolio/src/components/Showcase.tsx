@@ -9,7 +9,7 @@ import 'react-social-icons/github';
 import 'react-social-icons/linkedin';
 import 'react-social-icons/email';
 
-import './App.css';
+import '../styles/App.css';
 
 function Showcase() {
   const [githubHover, setGithubHover] = useState(false);

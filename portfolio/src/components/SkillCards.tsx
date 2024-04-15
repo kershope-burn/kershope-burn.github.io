@@ -4,7 +4,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 
-import './App.css';
+import '../styles/App.css';
 
 interface BadgeProps {
   content: string;

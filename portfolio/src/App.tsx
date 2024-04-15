@@ -8,16 +8,16 @@ import bcrypt from 'bcryptjs';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-import { InitContext } from './InitContext';
-import About from './About';
-import Navigation from './Navigation';
-import options from './particles';
-import PasswordForm from './PasswordForm';
-import { ProjectPage } from './ProjectPage';
-import { digitalSecurityAndPrivacyData, gamingAndSocialMediaData, charityAndCommunityData, portfolioSiteData } from './projectPages';
-import Home from './Home';
+import { InitContext } from './utils/InitContext';
+import About from './views/About';
+import Navigation from './components/Navigation';
+import options from './utils/particles';
+import PasswordForm from './components/PasswordForm';
+import { ProjectPage } from './views/ProjectPage';
+import { digitalSecurityAndPrivacyData, gamingAndSocialMediaData, charityAndCommunityData, portfolioSiteData } from './utils/projectPages';
+import Home from './views/Home';
 
-import './App.css';
+import './styles/App.css';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);

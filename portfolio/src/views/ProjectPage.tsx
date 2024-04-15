@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
-import './App.css';
+import '../styles/App.css';
 import React from 'react';
 
 export type ProjectData = {

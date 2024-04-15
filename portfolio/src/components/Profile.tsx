@@ -6,7 +6,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Row from 'react-bootstrap/Row';
 import Tooltip from 'react-bootstrap/Tooltip';
 
-import './App.css';
+import '../styles/App.css';
 
 export function Profile() {
   interface LinkProps {

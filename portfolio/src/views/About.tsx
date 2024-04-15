@@ -1,7 +1,7 @@
-import { Contact } from './Contact';
-import { Profile } from './Profile';
-import { Skills } from './Skills';
-import { Projects } from './Projects';
+import { Contact } from '../components/Contact';
+import { Profile } from '../components/Profile';
+import { Skills } from '../components/Skills';
+import { Projects } from '../components/Projects';
 
 function About() {
   return (

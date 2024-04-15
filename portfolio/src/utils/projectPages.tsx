@@ -1,6 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
-import { ProjectData, InlineBadge } from './ProjectPage';
-import './App.css';
+import { ProjectData, InlineBadge } from '../views/ProjectPage';
+import '../styles/App.css';
 
 export const digitalSecurityAndPrivacyData: ProjectData = {
   projectTitle: "projects/digital-security-and-privacy",

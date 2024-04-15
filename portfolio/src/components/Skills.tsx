@@ -2,13 +2,12 @@ import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
 import SkillCards from './SkillCards';
-import { engineeringCategories, managementCategories, engineeringSkillBadges, managementSkillBadges, softSkillBadges } from './skillBadges';
+import { engineeringCategories, managementCategories, engineeringSkillBadges, managementSkillBadges, softSkillBadges } from '../utils/skillBadges';
 
 export function Skills() {
   type CheckedCategoriesType = {

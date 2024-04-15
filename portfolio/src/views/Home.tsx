@@ -1,11 +1,11 @@
 import React from "react";
 import Particles from '@tsparticles/react';
 
-import { InitContext } from './InitContext';
-import options from './particles';
-import Showcase from './Showcase';
+import { InitContext } from '../utils/InitContext';
+import options from '../utils/particles';
+import Showcase from '../components/Showcase';
 
-import './App.css';
+import '../styles/App.css';
 
 function Home() {
   const context = React.useContext(InitContext);
