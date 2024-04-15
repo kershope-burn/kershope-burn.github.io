@@ -28,16 +28,16 @@ function Showcase() {
   const emailFgColor = emailHover ? fgColorOnHover : fgColorOnLeave;
 
   return (
-    <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '75vh' }}>
+    <Container className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '90vh' }}>
       <Row>
-        <Col>
-          <p className="display-1 portfolio-title" style={{ color: "floralwhite" }}>Æsc George</p>
-        </Col>
+        <p className="display-1 portfolio-title" style={{ color: "floralwhite" }}>Æsc George</p>
       </Row>
       <Row style={{ paddingBottom: '50px' }}>
-        <Col>
-          <p className="portfolio-title" style={{ color: "floralwhite" }}>Backend software engineer and proponent of responsible technology.</p>
+        <Col></Col>
+        <Col xs={10} md={12}>
+          <p className="portfolio-title text-center" style={{ color: "floralwhite" }}>Backend software engineer and proponent of responsible technology.</p>
         </Col>
+        <Col></Col>
       </Row>
       <Row>
         <Col>

@@ -48,8 +48,8 @@ export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
       <div style={{ backgroundColor: 'ghostwhite' }}>
         <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '70vh' }}>
           <Row style={{ paddingBottom: '50px' }}>
-            <Col xs={3} md={1}>
-              <Image src={projectImageLocation} rounded />
+            <Col className="d-flex align-items-center" xs={3} md={1}>
+              <Image src={projectImageLocation} fluid rounded />
             </Col>
             <Col>
               <p className="display-6 portfolio-section-header">{projectTitle}</p>
