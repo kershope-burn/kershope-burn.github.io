@@ -45,25 +45,28 @@ export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
 
   return (
     <>
+      {/* This first div ensures that the start of the remainder of the content is not obscured by the navbar on small screens */}
+      <div style={{ height: '80px', backgroundColor: 'ghostwhite' }} />
       <div style={{ backgroundColor: 'ghostwhite' }}>
         <Container className="d-flex flex-column justify-content-center" style={{ minHeight: '70vh' }}>
-          <Row style={{ paddingBottom: '50px' }}>
-            <Col className="d-flex align-items-center" xs={3} md={1}>
+          <Row className="align-items-center" style={{ paddingBottom: '40px' }}>
+            <Col className="text-center" xs={{ span: 6, offset: 3}} md={{ span: 1, offset: 0}}>
               <Image src={projectImageLocation} fluid rounded />
             </Col>
             <Col>
-              <p className="display-6 portfolio-section-header">{projectTitle}</p>
+              <p className="display-6 portfolio-section-header" style={{ paddingTop: '10px' }}>{projectTitle}</p>
             </Col>
           </Row>
-          <Row style={{ minHeight: '40vh' }}>
-            <Col style={{ paddingRight: '50px' }}>
+          <Row style={{ minHeight: '40vh', paddingBottom: '50px' }}>
+            <Col md={5}>
               <Row className="portfolio-text">
                 {projectDescription.map((paragraph) => (
                   <p style={{ fontSize: '1.1rem' }}>{paragraph}</p>
                 ))}
               </Row>
             </Col>
-            <Col>
+            <Col md={1}></Col>
+            <Col style={{ }}>
               <Tabs
                 defaultActiveKey="goals"
                 id="project-summary"
@@ -99,22 +102,22 @@ export const ProjectPage = ({ projectData }: {projectData: ProjectData}) => {
             <Row className="align-items-center">
               { index % 2 === 0 ? (
                 <>
-                  <Col md={3}>
-                    <Image src={detail.imageLocation} roundedCircle />
+                  <Col xs={{ span: 12, order: 'first' }} md={{ span: 3, order: 'first' }} className="text-center">
+                    <Image src={detail.imageLocation} fluid roundedCircle style={{ paddingBottom: '50px' }} />
                   </Col>
-                  <Col>
+                  <Col xs={{ span: 12, order: 'last' }} md={{ span: 9, order: 'last' }}>
                     <p className="display-6 portfolio-section-header">{detail.title}</p>
                     {detail.content}
                   </Col>
                 </>
               ) : ( 
                 <>
-                  <Col>
+                  <Col xs={{ span: 12, order: 'last' }} md={{ span: 9, order: 'first' }}>
                     <p className="display-6 portfolio-section-header">{detail.title}</p>
                     {detail.content}
                   </Col>
-                  <Col md={3}>
-                    <Image src={detail.imageLocation} roundedCircle />
+                  <Col xs={{ span: 12, order: 'first' }} md={{ span: 3, order: 'last' }} className="text-center">
+                    <Image src={detail.imageLocation} fluid roundedCircle style={{ paddingBottom: '50px' }} />
                   </Col>
                 </>
               )}

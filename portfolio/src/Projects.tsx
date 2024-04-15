@@ -74,7 +74,7 @@ export function Projects() {
         </Row>
         <Row>
           {projects.map((project, index) => (
-            <Col key={index} className="d-flex align-items-stretch">
+            <Col key={index} className="d-flex align-items-stretch" style={{ paddingBottom: '20px' }}>
               <ProjectCard title={project.title} text={project.text} skills={project.skills} src={project.src} link={project.link}/>
             </Col>
           ))}
